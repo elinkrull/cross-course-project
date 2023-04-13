@@ -1,0 +1,299 @@
+.body {
+    font-family: sans-serif, Verdana, Arial, Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+/* header and bottom section and footer */
+
+.logo {
+    max-width: 200px;
+}
+@media (min-width: 800px) {
+.member-info {
+    width: 100%; 
+    font-size: 14px;
+    padding:1px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: rgba(126, 194, 216, 0.34);
+}
+
+header nav a {
+    color: black;
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 0px 30px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.search-field {
+    padding: 15px 20px 0px 20px;
+    border: none;
+}
+
+.onpage {
+    font-weight: bold;
+}
+
+.profileandcart {
+    max-width: 90px;
+    margin: 0px 20px -5px 0px;
+}
+
+.stars {
+    max-width: 20%;
+    margin-top: 20px;
+}
+
+.review {
+    font-size: 18px;
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.34);
+}
+
+.review-homepage {
+    font-size: 18px;
+    text-align: center;
+}
+
+.review.button {
+    font-size: 14px;
+    background-color: white;
+    padding: 5px 40px;
+    margin: 15px;
+    border: 1px solid black;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-top: 2px solid rgba(0, 0, 0, 0.34);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.34);
+}   
+
+.bottom-section-left {
+}
+
+.bottom-section-right {
+}
+
+.social-media-icons {
+    display: flex;
+    margin-bottom: 4px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.social-media-facebook, .social-media-instagram {
+    max-width: 30px;
+    padding: 0px 20px;
+}
+
+.footer {
+    font-size: 12px;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+} 
+
+}
+
+/* home page */
+
+.runner_light,  .racer, .everest, .biker, .runner, .everyday {
+    max-width: 250px;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1000px;
+    margin: 20px;
+    text-align: center;
+}
+
+.shop-men-image, .shop-women-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 70% 0;
+}
+
+.shop-women-image{
+    object-position: 20% 0;
+}
+
+.shop-all-image {
+    position: relative;
+    width: 550px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 60% 90%;
+} 
+.shop-all-text {
+    position: absolute;
+    font-size: 12px;
+}
+
+.best-sellers-header {
+    font-size: 18px;
+    text-align: center;
+    background-color: rgba(126, 194, 216, 0.34);
+    padding: 12px;
+}
+
+.best-seller-jackets {
+    display: flex;
+}
+
+.best-sellers {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.newsletter {
+    position: relative;
+    background-image: url(/img/man_in_brown_jacket.jpeg);
+    background-repeat: no-repeat;
+    min-height: 400px;
+    max-width: 900px;
+    background-size: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.newsletter-text {
+    font-family: poppin;
+    font-size: 26px;
+    position: absolute;
+    text-align: center;
+    left: 150px;
+    top: 100px;
+}
+
+.shopping {
+    background-color: rgba(48, 169, 60, 0.2);
+    text-decoration: none;
+}
+
+/* products page*/
+
+
+.all-jackets {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 50px auto;
+}
+
+.all-jackets-specific {
+    text-align: center;
+}
+
+/* delivery page */
+
+fieldset {
+    background-color: rgba(245, 245, 245, 1);
+    border: none;
+    margin: 50px;
+}
+
+/* payment page */
+
+.paybutton {
+    color: white;
+    background-color: rgba(48, 169, 60, 1);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5%;
+    border: none;
+    padding: 4px 60px;
+}
+
+.radiobutton {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+/* checkout page*/
+
+.checkout-success {
+    text-align: center;
+}
+
+.checkout-success-header {
+    margin: 60px;
+}
+
+/* contact page */
+
+.contact-content {
+    max-width: 1200px;
+    display: flex;
+    margin: 50px auto;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(245, 245, 245, 1);
+    padding: 20px;
+}
+
+main form label {
+    display: block;
+    margin: 10px;
+}
+
+.send-message-button {
+    background-color: rgba(246, 177, 44, 1);
+    border: none;
+    border-radius: 100px;
+    padding: 5px 50px;
+    margin: 10px;
+}
+
+.woman-mountain {
+    max-width: 700px;
+    margin-left: 40px;
+}
+
+/* about us page*/
+
+.camping {
+    max-width: 200px;
+}
+
+.about {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.about-image, .about-text {
+   flex: 1;
+}
+
+.about-image {
+    max-width: 50%;
+    padding: 20px;
+}
+.about-text {
+    font-size: 18px;
+}
