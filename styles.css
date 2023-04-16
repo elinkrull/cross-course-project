@@ -171,6 +171,7 @@ header nav a {
 
 .best-sellers-header {
     font-size: 18px;
+    font-weight: bold;
     text-align: center;
     background-color: rgba(126, 194, 216, 0.34);
     padding: 12px;
@@ -218,10 +219,6 @@ header nav a {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: 50px auto;
-}
-
-.all-jackets-specific {
-    text-align: center;
 }
 
 /* product spesific page*/
