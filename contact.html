@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <title>Contact us</title>
+        <meta name="description" content="This page show you contact information, and you can also send us a direct message on this page">
         <script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -17,16 +18,20 @@
                     <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A picture of Rainy Days Logo" class="logo"></a>
                 </div>
                 <nav class="navigationbar">
-                    <a href="productpage.html">Shop</a>
+                    <a href="product.html">Shop</a>
                     <a href="about.html">About</a>
-                    <a href="sale">Sale</a>
+                    <a href="product.html">Sale</a>
                     <a href="contact.html" class="onpage">Contact</a>
                 </nav>
-                <form>
-                    <input type="search" name="search" id="search" class="search-field">
-                </form>
                 <div>
-                    <img src="icons/profileandcart.png" alt="icon of profile and cart" class="profileandcart" >
+                    <form class="search">
+                        <label for="sitesearch" class="search-only">search</label>
+                        <input type="text" name="search" id="sitesearch" class="search-field">
+                    </form>
+                </div>
+                <div class="header-icons">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-light fa-cart-shopping"></i>
                 </div>
             </section>                                                      
         </header>
@@ -53,42 +58,33 @@
                     <img src="img/woman_mountains.jpg" alt="Picture of a hiking woman sitting on the top of a mountain" class="woman-mountain">
                 </div>
             </section>
-            <section>
-                <div class="review">
-                    <img src="icons/stars.png" alt="five stars" class="stars">
-                    <p>“This jacket has become my favourite.<br>Great fit and very comfortable both for hiking and everyday use"</p>
-                    <button class="review button">More Reviews</button>
-                </div>
-            </section>  
+        </main>
+        <footer>
             <section class="bottom-section">
-                <div class="bottom-section-left">
-                    <div>
-                        <p>Info</p>
-                    </div>
-                    <nav>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>                            
-                        <a href="#">Size Guide</a>
-                        <a href="#">Reviews</a>
-                    </nav>
+                <div class="bottom-section-1">
+                    <ul>
+                        <li class="bold-text">Info</li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Size Guide</a></li>
+                        <li><a href="index.html">Reviews</a></li>
+                    </ul>
                 </div>
-                <div class="bottom-section-right">
-                    <div>
-                        <p>Your benefits</p>
-                    </div>
-                    <nav>
-                        <a href="#">Free shipping</a>
-                        <a href="#">Free Return</a>
-                    </nav>
+                <div class="bottom-section-2">
+                    <ul>
+                        <li class="bold-text">Your benefits</li>
+                        <li><a href="index.html">Free shipping</a></li>
+                        <li><a href="index.html">Free Return</a></li>
+                    </ul>
                 </div>
             </section>
             <section class="social-media-icons">
-                <img src="icons/facebook.svg" alt="facebook icon" class="social-media-facebook">
-                <img src="icons/instagram.svg" alt="instagram icon" class="social-media-instagram">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
             </section>
-        </main>
-        <footer>
-            <p class="footer">Rainy Days &copy; All Rights Served</p>
+            <div class="footer-bottom">
+                <p>Rainy Days &copy; All Rights Served</p>
+            </div>
         </footer>
     </body>
 </html>

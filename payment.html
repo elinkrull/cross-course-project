@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <title>Payment method and information</title>
+        <meta name="description" content="On this page you choose the payment method and then you have to write your payment details and complete the payment">
         <script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -17,16 +18,20 @@
                     <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A picture of Rainy Days Logo" class="logo"></a>
                 </div>
                 <nav class="navigationbar">
-                    <a href="productpage.html">Shop</a>
+                    <a href="product.html">Shop</a>
                     <a href="about.html">About</a>
-                    <a href="sale">Sale</a>
+                    <a href="product.html">Sale</a>
                     <a href="contact.html">Contact</a>
                 </nav>
-                <form>
-                    <input type="search" name="search" id="search" class="search-field">
-                </form>
                 <div>
-                    <img src="icons/profileandcart.png" alt="icon of profile and cart" class="profileandcart" >
+                    <form class="search">
+                        <label for="sitesearch" class="search-only">search</label>
+                        <input type="text" name="search" id="sitesearch" class="search-field">
+                    </form>
+                </div>
+                <div class="header-icons">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-light fa-cart-shopping"></i>
                 </div>
             </section>                                                      
         </header>
@@ -56,30 +61,33 @@
                     <button class="paybutton" type="button">Pay now</button>
                 </div>
             </form>
-            <section class="bottom section">
-                <div>
-                    <p><strong>Info</strong></p>
+        </main>
+        <footer>
+            <section class="bottom-section">
+                <div class="bottom-section-1">
+                    <ul>
+                        <li class="bold-text">Info</li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Size Guide</a></li>
+                        <li><a href="index.html">Reviews</a></li>
+                    </ul>
                 </div>
-                <nav>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="#">Size Guide</a>
-                    <a href="#">Reviews</a>
-                </nav>
-                <div>
-                    <p><strong>Your benefits</strong></p>
+                <div class="bottom-section-2">
+                    <ul>
+                        <li class="bold-text">Your benefits</li>
+                        <li><a href="index.html">Free shipping</a></li>
+                        <li><a href="index.html">Free Return</a></li>
+                    </ul>
                 </div>
-                <nav>
-                    <a href="#">Free shipping</a>
-                    <a href="#">Free Return</a>
-                </nav>
-                <section class="social-media-icons">
-                    <img src="icons/facebook.svg" alt="facebook icon" class="social-media-facebook">
-                    <img src="icons/instagram.svg" alt="instagram icon" class="social-media-instagram">
-                </section>
-            </main>
-            <footer>
-                <p class="footer">Rainy Days &copy; All Rights Served</p>
-            </footer>
-        </body>
-    </html>
+            </section>
+            <section class="social-media-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+            </section>
+            <div class="footer-bottom">
+                <p>Rainy Days &copy; All Rights Served</p>
+            </div>
+        </footer>
+    </body>
+</html>
