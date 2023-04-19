@@ -1,11 +1,12 @@
+/* practice css branch */
+
 body {
     font-family: sans-serif, Verdana, Arial, Helvetica;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1200px
 }
 
-/* header and footer */
-
+/
 .logo {
     max-width: 200px;
 }
