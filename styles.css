@@ -2,17 +2,15 @@
 
 body {
     font-family: sans-serif, Verdana, Arial, Helvetica;
-    margin: 0 auto;
-    max-width: 1200px
+    margin: auto;
+    max-width: 100%;
 }
 
-/
 .logo {
     max-width: 200px;
 }
 
 .member-info {
-    width: 100%; 
     font-size: 14px;
     padding:1px;
     color: white;
@@ -77,6 +75,10 @@ header nav a {
     border: 1px solid black;
 }
 
+.fa-star {
+    color: rgb(240, 224, 10);
+}
+
 .bottom-section {
     display: flex;
     justify-content: center;
@@ -89,6 +91,7 @@ header nav a {
 .bottom-section-1 li, .bottom-section-2 li {
     margin: 5px;
     list-style-type: none;
+    color: black;
 }
 
 .social-media-icons {
@@ -97,6 +100,10 @@ header nav a {
     justify-content: flex-end;
     padding: 10px 50px;
     gap: 30px;
+}
+
+.fa-facebook, .fa-instagram {
+    font-size: 30px;
 }
 
 .footer-bottom {
@@ -112,8 +119,9 @@ header nav a {
 .shop {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    max-width: 1000px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
 }
 
 .shop-container {
@@ -134,7 +142,7 @@ header nav a {
 }
 
 .shop-all-image {
-    width: 550px;
+    min-width: 550px;
     object-position: 60% 90%;
 }
 
@@ -166,10 +174,6 @@ header nav a {
     left: 50px;
 }
 
-.runner_light,  .racer, .everest, .biker, .runner, .everyday {
-    max-width: 250px;
-}
-
 .best-sellers-header {
     font-size: 18px;
     font-weight: bold;
@@ -178,14 +182,22 @@ header nav a {
     padding: 12px;
 }
 
-.best-seller-jackets {
-    height: 300px;
-    width: 200px;
-}
-
 .best-sellers {
     display: flex;
     margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.best-seller-jackets {
+    flex: 1 0 300px;
+}
+
+.best-sellers-jackets-container {
+    max-width: 250px;
+}
+
+.everest, .biker, .runner_light, .racer {
+    width: 100%;
 }
 
 .newsletter {
@@ -219,7 +231,11 @@ header nav a {
 .all-jackets {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin: 50px auto;
+    margin-top: 30px;
+}
+
+.all-jackets-container {
+    max-width: 250px;
 }
 
 /* product spesific page*/
@@ -358,27 +374,5 @@ main form label {
 }
 .about-text {
     font-size: 18px;
-}
-
-/* mobile styles */
-
-@media only screen and (max-width:480px) {
-    
-}
-
-/* tablet styles */
-
-@media only screen and (min-width:481px) and (max-width:768px) {
-    body {
-            width: 90%;
-    }
-}
-
-/* desktop styles */
-
-@media only screen and (min-width:769px) {
-    body {
-            width: 1200px;
-    }
 }
 
