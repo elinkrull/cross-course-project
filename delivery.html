@@ -39,54 +39,58 @@
         <main>
             <section>
                 <form>
-                    <fieldset>
-                        <div>
-                            <h3>Contact information</h3>
+                    <fieldset class="delivery-container">
+                        <div class="delivery-container-1">
+                            <div>
+                                <h3>Contact information</h3>
+                            </div>
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input type="text" name="email" id="email" class="form__input">
+                            </div>
+                            <div>
+                                <h3>Delivery Adresse</h3>
+                            </div>
+                            <div>   
+                                <label for="name">First name</label>
+                                <input type="text" name="name" id="name" class="form__input">
+                            </div>
+                            <div>   
+                                <label for="name">Last name</label>
+                                <input type="text" name="name" id="name" class="form__input">
+                            </div>
+                            <div>
+                                <label for="adresse">Adresse</label> 
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                            </div>
+                            <div>
+                                <label for="adresse">Post code</label>
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                            </div>
+                            <div>
+                                <label for="adresse">City</label>
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                            </div>
+                            <div>
+                                <label for="phone">Mobile phone</label>
+                                <input type="tel" name="phone" id="phone" class="form__input">
+                            </div>
                         </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email" id="email" class="form__input">
-                        </div>
-                        <div>
-                            <h3>Delivery Adresse</h3>
-                        </div>
-                        <div>   
-                            <label for="name">First name</label>
-                            <input type="text" name="name" id="name" class="form__input">
-                        </div>
-                        <div>   
-                            <label for="name">Last name</label>
-                            <input type="text" name="name" id="name" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">Adresse</label> 
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">Post code</label>
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">City</label>
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="phone">Mobile phone</label>
-                            <input type="tel" name="phone" id="phone" class="form__input">
-                        </div>
-                        <div>
-                            <h3>Shipping</h3>
-                        </div>
-                        <div class="radiobutton">
-                            <input type="radio" id="pickup" name="shipping" value="pickup">
-                            <label for="pickup">Pick up the package by post in store<br>(Post nord)<br>(0 kr)</label>
-                        </div>
-                        <div class="radiobutton">
-                            <input type="radio" id="porterbuddy" name="shipping" value="porterbuddy">
-                            <label for="porterbuddy">Porterbuddy<br>(49 kr)</label>
-                        </div>
-                        <div>
-                            <a href="checkout.html" class="button pay-next-button">PAY NOW</a>
+                        <div class="delivery-container-2">
+                            <div>
+                                <h3>Shipping</h3>
+                            </div>
+                            <div class="radiobutton">
+                                <input type="radio" id="pickup" name="shipping" value="pickup">
+                                <label for="pickup">Pick up the package by post in store<br>(Post nord)<br>(0 kr)</label>
+                            </div>
+                            <div class="radiobutton">
+                                <input type="radio" id="porterbuddy" name="shipping" value="porterbuddy">
+                                <label for="porterbuddy">Porterbuddy<br>(49 kr)</label>
+                            </div>
+                            <div>
+                                <a href="payment.html" class="button pay-next-button">Next</a>
+                            </div>
                         </div>
                     </fieldset>
                 </form>

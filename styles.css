@@ -279,13 +279,27 @@ header nav a {
 
 /* cart page */
 
+.cart-container {
+    display: flex;
+    height: 700px;
+    width: 1200px;
+    background-color:rgba(245, 245, 245, 1);
+    padding: 20px;
+    margin: 50px auto;
+}
+
+.cart-container-1, .cart-container-2 {
+    padding: 20px;
+    margin: 10px auto;
+    background-color: white;
+}
+
 .button {
     color: white;
     background-color: rgba(48, 169, 60, 1);
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    border-radius: 5%;
     border: none;
 }
 
@@ -293,23 +307,59 @@ header nav a {
     padding: 8px 160px;
 }
 
+
 /* delivery page */
 
-fieldset {
+.delivery-container {
+    display: grid;
     background-color: rgba(245, 245, 245, 1);
     border: none;
     margin: 50px;
 }
 
-/* payment page */
-
-.pay-button, .pay-next-button {
-    padding: 4px 60px;
-}
-
 .radiobutton {
     border: 1px solid black;
+    background-color: white;
     margin: 20px;
+}
+
+.pay-next-button {
+    padding: 10px 165px;
+    margin-left: 20px;
+}
+
+/* payment page */
+
+.payment-alternatives {
+    border: none;
+    margin-left: 40px;
+}
+
+.payment-header {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.payment-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.payment-card-info, .payment-info {
+    border: none;
+    background-color: rgba(245, 245, 245, 1);
+    width: 400px;
+    margin: 20px;
+}
+
+.payment-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.pay-button {
+    padding: 8px 60px;
 }
 
 /* checkout page*/
@@ -320,6 +370,11 @@ fieldset {
 
 .checkout-success-header {
     margin: 60px;
+}
+
+.order-details {
+    border: 2px solid grey;
+    margin: 20px 600px;
 }
 
 /* contact page */
@@ -432,5 +487,8 @@ main form label {
         display: none;
     }
     
+    .delivery-container {
+        grid-template-columns: 1fr;
+    }
 }
 

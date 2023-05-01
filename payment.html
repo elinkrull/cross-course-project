@@ -38,8 +38,8 @@
         </header>
         <main>
             <form action="submit.php or formsuccess.php" method="POST">
-                <fieldset>
-                    <p>Payment</p>
+                <fieldset class="payment-alternatives">
+                    <h1 class="payment-header">Payment</h1>
                     <input type="radio" id="invoice" name="payment method" value="invoice">
                     <label for="invoice">Invoice</label>
                     <input type="radio" id="paypal" name="payment method" value="paypal">
@@ -47,21 +47,21 @@
                     <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
                     <label for="credit-/debit carn">Credit-/debit card</label>
                 </fieldset>
-                <fieldset>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="number">Card number</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="name">Expiration date</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="cvc">cvc</label>
-                    <input type="text" name="cvc" id="cvc" class="form input" required>
-                </fieldset>
-                <div>
-                    <p>Total amount: 2 299kr</p>
-                </div>
-                <div>
-                    <a href="delivery.html" class="button pay-button">PAY NOW</a>
+                <div class="payment-card">
+                    <fieldset class="payment-card-info">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="number">Card number</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="name">Expiration date</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="cvc">cvc</label>
+                        <input type="text" name="cvc" id="cvc" class="form input" required>
+                    </fieldset>
+                    <div class="payment-info">
+                        <h2>Total amount: 2 299kr</h2>
+                        <a href="checkout.html" class="button pay-button">PAY NOW</a>
+                    </div>
                 </div>
             </form>
         </main>
