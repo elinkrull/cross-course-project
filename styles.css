@@ -188,7 +188,7 @@ header nav a {
     flex-wrap: wrap;
 }
 
-.best-seller-jackets {
+.best-sellers-jackets {
     flex: 1 0 300px;
 }
 
@@ -196,8 +196,8 @@ header nav a {
     max-width: 250px;
 }
 
-.everest, .biker, .runner_light, .racer {
-    width: 100%;
+.index-everest, .index-biker, .index-runner-light, .index-racer {
+    max-width: 250px;
 }
 
 .newsletter {
@@ -231,12 +231,20 @@ header nav a {
 .all-jackets {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin-top: 30px;
+    margin-left: 40px;
 }
 
 .all-jackets-container {
-    max-width: 250px;
+    max-width: 400px;
+    margin: 30px;
 }
+
+.everest, .everyday, .runner, .biker, .runner_light, .racer {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+}
+
 
 /* product spesific page*/
 
@@ -316,17 +324,24 @@ fieldset {
 
 /* contact page */
 
+.contact-header {
+    margin: 50px 0px 0px 120px;
+}
+
 .contact-content {
     max-width: 1200px;
     display: flex;
-    margin: 50px auto;
+    margin: 20px auto;
+    margin-bottom: 40px;
 }
 
 .contact-form {
+    width: 400px;
+    height: 350px;
     display: grid;
-    grid-template-columns: 1fr;
     background-color: rgba(245, 245, 245, 1);
     padding: 20px;
+    margin-right: 20px;
 }
 
 main form label {
@@ -342,9 +357,15 @@ main form label {
     margin: 10px;
 }
 
+.contact-email {
+    text-align: center;
+}
+
 .woman-mountain {
-    max-width: 700px;
-    margin-left: 40px;
+    width: 750px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 100% 40%;
 }
 
 /* about us page*/
@@ -358,6 +379,7 @@ main form label {
     margin: 50px auto;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .about-image, .about-text {
@@ -400,6 +422,14 @@ main form label {
 
     .all-jackets {
         grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .woman-mountain {
+        display: none;
     }
     
 }
