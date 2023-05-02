@@ -2,6 +2,7 @@
 
 /* global code */
 
+
 body {
     font-family: sans-serif, Verdana, Arial, Helvetica;
     margin: auto;
@@ -22,7 +23,6 @@ body {
 
 .header-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
     padding: 20px;
@@ -38,28 +38,22 @@ header nav a {
     text-decoration: none;
 }
 
-.search {
-    position: relative;
-}
-
 .search-field {
-    padding: 15px 20px 0px 20px;
+    display: flex;
+    padding: 10px 20px;
     border: none;
 }
 
 .search-only {
-    position: absolute;
-    color: gray;
-    left: 5px;
-    top: 6px;
+   display: none;
 }
 
 .onpage {
     font-weight: bold;
 }
 
-.header-icons {
-    padding-right: 50px;
+.fa-cart-shopping, .fa-user  {
+    padding: 0px 20px;
 }
 
 .review-homepage {
@@ -79,6 +73,7 @@ header nav a {
 
 .fa-star {
     color: rgb(240, 224, 10);
+    font-size: 24px;
 }
 
 .bottom-section {
@@ -86,14 +81,21 @@ header nav a {
     justify-content: center;
     margin-top: 20px;
     padding-top: 20px;
-    gap: 180px;
+    gap: 100px;
     background-color: rgba(126, 194, 216, 0.34);
 }
 
-.bottom-section-1 li, .bottom-section-2 li {
-    margin: 5px;
+.bottom-section-1 ul, .bottom-section-2 ul {
     list-style-type: none;
+}
+
+.bottom-section-1 h2, .bottom-section-2 h2 {
+    font-size: 16px
+}
+
+a {
     color: black;
+    text-decoration: none;
 }
 
 .social-media-icons {
@@ -144,7 +146,7 @@ header nav a {
 }
 
 .shop-all-image {
-    min-width: 550px;
+    min-width: 100%;
     object-position: 60% 90%;
 }
 
@@ -344,6 +346,7 @@ header nav a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .payment-card-info, .payment-info {
@@ -370,11 +373,6 @@ header nav a {
 
 .checkout-success-header {
     margin: 60px;
-}
-
-.order-details {
-    border: 2px solid grey;
-    margin: 20px 600px;
 }
 
 /* contact page */
@@ -450,19 +448,13 @@ main form label {
 }
 
 
+/*-------------------------- styles ------------------------- */
 
-/* desktop styles */
-
-@media(min-width:769px) {
-    
-}
-
-/* tablet styles */
 
 @media(max-width:1216px) {
 
     body {
-            width: 90%;
+            width: 100%;
       }
     
     .all-jackets {
@@ -471,9 +463,33 @@ main form label {
     
 }
 
-/* mobile styles */
+@media(max-width:700px) {
+    .newsletter-text {
+        font-size: 20px;
+        left: 60px;
+        top: 200px;
+    }
+    
+    .newsletter {
+        max-height: 300px;
+        max-width: 100%;
+    }
+}
+
 
 @media(max-width:480px) {
+
+    body {
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .search-field {
+       padding: 5px 10px;   
+    }
 
     .all-jackets {
         grid-template-columns: 1fr;
@@ -490,5 +506,15 @@ main form label {
     .delivery-container {
         grid-template-columns: 1fr;
     }
+
+    .checkout-success {
+        width: 90%;
+    }
+
+    .bottom-section {
+        gap: 100px;
+    }
+
+
 }
 
