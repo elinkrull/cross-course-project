@@ -16,7 +16,7 @@
                 </div>
             <section class="header-content">
                 <div>
-                    <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A picture of Rainy Days Logo" class="logo"></a>
+                    <a href="index.html"><img src="img/RainyDays_Logo.png" alt="Rainy Days Logo" class="logo"></a>
                 </div>
                     <nav class="navigationbar">
                     <a href="product.html">Shop</a>
@@ -39,54 +39,48 @@
         <main>
             <section>
                 <form>
-                    <fieldset>
-                        <div>
-                            <h3>Contact information</h3>
+                    <fieldset class="delivery-container">
+                        <div class="delivery-container-1">
+                            <div>
+                                <h1>Contact information</h1>
+                            </div>
+                            <div>
+                                <label for="email" class="delivery-label">E-mail</label>
+                                <input type="text" name="email" id="email" class="form__input">
+                            </div>
+                            <div>
+                                <h1>Delivery Adresse</h1>
+                            </div>
+                            <div>   
+                                <label for="name" class="delivery-label">First name</label>
+                                <input type="text" name="name" id="name" class="form__input">  
+                                <label for="name" class="delivery-label">Last name</label>
+                                <input type="text" name="name" id="name" class="form__input">
+                                <label for="adresse" class="delivery-label">Adresse</label> 
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                                <label for="adresse" class="delivery-label">Post code</label>
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                                <label for="adresse" class="delivery-label">City</label>
+                                <input type="text" name="adresse" id="adresse" class="form__input">
+                                <label for="phone" class="delivery-label">Mobile phone</label>
+                                <input type="tel" name="phone" id="phone" class="form__input">
+                            </div>
                         </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email" id="email" class="form__input">
-                        </div>
-                        <div>
-                            <h3>Delivery Adresse</h3>
-                        </div>
-                        <div>   
-                            <label for="name">First name</label>
-                            <input type="text" name="name" id="name" class="form__input">
-                        </div>
-                        <div>   
-                            <label for="name">Last name</label>
-                            <input type="text" name="name" id="name" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">Adresse</label> 
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">Post code</label>
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="adresse">City</label>
-                            <input type="text" name="adresse" id="adresse" class="form__input">
-                        </div>
-                        <div>
-                            <label for="phone">Mobile phone</label>
-                            <input type="tel" name="phone" id="phone" class="form__input">
-                        </div>
-                        <div>
-                            <h3>Shipping</h3>
-                        </div>
-                        <div class="radiobutton">
-                            <input type="radio" id="pickup" name="shipping" value="pickup">
-                            <label for="pickup">Pick up the package by post in store<br>(Post nord)<br>(0 kr)</label>
-                        </div>
-                        <div class="radiobutton">
-                            <input type="radio" id="porterbuddy" name="shipping" value="porterbuddy">
-                            <label for="porterbuddy">Porterbuddy<br>(49 kr)</label>
-                        </div>
-                        <div>
-                            <a href="checkout.html" class="pay-next-button">PAY NOW</a>
+                        <div class="delivery-container-2">
+                            <div>
+                                <h2>Shipping</h2>
+                            </div>
+                            <div class="radiobutton">
+                                <input type="radio" id="pickup" name="shipping" value="pickup">
+                                <label for="pickup">Pick up the package by post in store<br>(Post nord)<br>(0 kr)</label>
+                            </div>
+                            <div class="radiobutton">
+                                <input type="radio" id="porterbuddy" name="shipping" value="porterbuddy">
+                                <label for="porterbuddy">Porterbuddy<br>(49 kr)</label>
+                            </div>
+                            <div>
+                                <a href="payment.html" class="button pay-next-button">Next</a>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -101,15 +95,15 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <p>“This jacket has become my favourite.<br>Great fit and very comfortable both for hiking and everyday use"</p>
-                    <a href= "index.html" class="review button">More Reviews</a>
+                    <a href= "index.html" class="review-button">More Reviews</a>
                 </div>
             </section>
         </main>
         <footer>
-            <section class="bottom-section">
+            <div class="bottom-section">
                 <div class="bottom-section-1">
                     <ul>
-                        <li class="bold-text">Info</li>
+                        <h2>Info</h2>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="index.html">Size Guide</a></li>
@@ -118,16 +112,16 @@
                 </div>
                 <div class="bottom-section-2">
                     <ul>
-                        <li class="bold-text">Your benefits</li>
+                        <h2>Your benefits</h2>
                         <li><a href="index.html">Free shipping</a></li>
                         <li><a href="index.html">Free Return</a></li>
                     </ul>
                 </div>
-            </section>
-            <section class="social-media-icons">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-            </section>
+            </div>
+            <div class="social-media-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
             <div class="footer-bottom">
                 <p>Rainy Days &copy; All Rights Served</p>
             </div>

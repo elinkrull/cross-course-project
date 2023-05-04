@@ -16,7 +16,7 @@
                 </div>
             <section class="header-content">
                 <div>
-                    <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A picture of Rainy Days Logo" class="logo"></a>
+                    <a href="index.html"><img src="img/RainyDays_Logo.png" alt="Rainy Days Logo" class="logo"></a>
                 </div>
                 <nav class="navigationbar">
                     <a href="product.html">Shop</a>
@@ -38,38 +38,49 @@
         </header>
         <main>
             <form action="submit.php or formsuccess.php" method="POST">
-                <fieldset>
-                    <p>Payment</p>
-                    <input type="radio" id="invoice" name="payment method" value="invoice">
-                    <label for="invoice">Invoice</label>
-                    <input type="radio" id="paypal" name="payment method" value="paypal">
-                    <label for="paypal">Paypal</label>
-                    <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
-                    <label for="credit-/debit carn">Credit-/debit card</label>
+                <fieldset class="payment-alternatives">
+                    <h1 class="payment-header">Payment</h1>
+                    <div>
+                        <input type="radio" id="invoice" name="payment method" value="invoice">
+                        <label for="invoice">Invoice</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="paypal" name="payment method" value="paypal">
+                        <label for="paypal" class="paypal-icon">Paypal</label>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                    </div>
+                    <div>
+                        <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
+                        <label for="credit-/debit carn">Credit-/debit card</label>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
                 </fieldset>
-                <fieldset>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="number">Card number</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="name">Expiration date</label>
-                    <input type="text" name="name" id="name" class="form input" required>
-                    <label for="cvc">cvc</label>
-                    <input type="text" name="cvc" id="cvc" class="form input" required>
-                </fieldset>
-                <div>
-                    <p>Total amount: 2 299kr</p>
-                </div>
-                <div>
-                    <a href="delivery.html" class="paybutton">PAY NOW</a>
+                <div class="payment-card">
+                    <fieldset class="payment-card-info">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="number">Card number</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="name">Expiration date</label>
+                        <input type="text" name="name" id="name" class="form input" required>
+                        <label for="cvc">cvc</label>
+                        <input type="text" name="cvc" id="cvc" class="form input" required>
+                    </fieldset>
+                    <div class="payment-info">
+                        <div>
+                            <h1>Total amount: 2 299kr</h1>
+                            <a href="checkout.html" class="button pay-button">PAY NOW</a>
+                        </div>
+                    </div>
                 </div>
             </form>
         </main>
         <footer>
-            <section class="bottom-section">
+            <div class="bottom-section">
                 <div class="bottom-section-1">
                     <ul>
-                        <li class="bold-text">Info</li>
+                        <h2>Info</h2>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="index.html">Size Guide</a></li>
@@ -78,16 +89,16 @@
                 </div>
                 <div class="bottom-section-2">
                     <ul>
-                        <li class="bold-text">Your benefits</li>
+                        <h2>Your benefits</h2>
                         <li><a href="index.html">Free shipping</a></li>
                         <li><a href="index.html">Free Return</a></li>
                     </ul>
                 </div>
-            </section>
-            <section class="social-media-icons">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-            </section>
+            </div>
+            <div class="social-media-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
             <div class="footer-bottom">
                 <p>Rainy Days &copy; All Rights Served</p>
             </div>
