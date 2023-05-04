@@ -11,45 +11,43 @@
     </head>
     <body>
         <header>
-                <div class="member-info">
-                    <p>FREE DELIVERY AND RETURN FOR MEMBERS</p>
-                </div>
-            <section class="header-content">
-                <div>
-                    <a href="index.html"><img src="img/RainyDays_Logo.png" alt="Rainy Days Logo" class="logo"></a>
-                </div>
-                <nav class="navigationbar">
-                    <a href="product.html">Shop</a>
-                    <a href="about.html">About</a>
-                    <a href="product.html">Sale</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div>
-                    <form class="search">
-                        <label for="sitesearch" class="search-only">search</label>
-                        <input type="text" name="search" id="sitesearch" class="search-field">
-                    </form>
-                </div>  
-                <div class="header-icons">
-                    <i class="fa-regular fa-user"></i>
-                    <i class="fa-light fa-cart-shopping"></i>
-                </div>
-            </section>                                                      
-        </header>
+            <div class="member-info">
+                <p>FREE DELIVERY AND RETURN FOR MEMBERS</p>
+            </div>
+        <section class="header-content">
+            <figure>
+                <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A Rainy Days Logo" class="logo"></a>
+            </figure>
+            <label for="hamburger-checkbox"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="hamburger-checkbox">
+            <nav>
+                <a href="product.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Sale</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <label for="sitesearch" class="search-only">search</label>
+                <input type="text" name="search" id="sitesearch" class="search-field">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>  
+        </section>                                                      
+    </header>
         <main>
             <form action="submit.php or formsuccess.php" method="POST">
                 <fieldset class="payment-alternatives">
                     <h1 class="payment-header">Payment</h1>
-                    <div>
+                    <div class="payment">
                         <input type="radio" id="invoice" name="payment method" value="invoice">
                         <label for="invoice">Invoice</label>
                     </div>
-                    <div>
+                    <div class="payment">
                         <input type="radio" id="paypal" name="payment method" value="paypal">
                         <label for="paypal" class="paypal-icon">Paypal</label>
                         <i class="fa-brands fa-cc-paypal"></i>
                     </div>
-                    <div>
+                    <div class="payment">
                         <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
                         <label for="credit-/debit carn">Credit-/debit card</label>
                         <i class="fa-brands fa-cc-visa"></i>

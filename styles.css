@@ -33,12 +33,15 @@ body {
 #hamburger-checkbox:checked ~ nav {
     display: block;
     position: absolute;
-    left: 0px;
-    bottom: -20px;
+    bottom: -80px;
 }
 
 nav, #hamburger-checkbox {
     display: none;
+}
+
+nav a {
+    display: block;
 }
 
 .fa-bars {
@@ -56,6 +59,12 @@ nav, #hamburger-checkbox {
 
 .search-only {
    display: none;
+}
+
+.header-icons {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
 }
 
 .onpage {
@@ -133,7 +142,7 @@ a {
 .shop {
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
     max-width: 100%;
     flex-wrap: wrap;
     flex: 1;
@@ -146,7 +155,7 @@ a {
 
 .shop-men-image, .shop-women-image, .shop-all-image  {
     position: relative;
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     object-fit: cover;
     object-position: 70% 0;
@@ -157,8 +166,8 @@ a {
 }
 
 .shop-all-image {
-    min-width: 100%;
-    object-position: 60% 90%;
+    max-width: 600px; 
+    object-position: 40% 90%;
 }
 
 .shop-men-button, .shop-women-button, .shop-all-button {
@@ -180,11 +189,11 @@ a {
 }
 
 .shop-all-text {
-    font-size: 16px;
-    position: absolute;
+    font-size: 14px;
+    position: absolute; 
     text-align: center;
-    bottom: 80px;
-    left: 50px;
+    bottom: 70px;
+    left: 60px;
 }
 
 .best-sellers-header {
@@ -377,6 +386,10 @@ a {
     flex-wrap: wrap;
 }
 
+.payment {
+    margin: 10px 0px;
+}
+
 .payment-card-info, .payment-info {
     display: flex;
     flex-direction: column;
@@ -484,6 +497,7 @@ a {
 }
 
 @media(max-width:1216px) {
+
     .add-to-cart-button {
         padding: 6px 40px;
     }
@@ -492,14 +506,15 @@ a {
 @media(max-width:700px) {
 
     .logo {
-        max-width: 80px;
+        max-width: 100px;
     }
 
     .search-field {
-        padding: 3px 5px;   
-     }
+        padding: 3px 7px;
+        margin-top: 10px;
+    }
 
-     .bottom-section {
+    .bottom-section {
         gap: 100px;
     }
 
@@ -526,6 +541,14 @@ a {
 
     .main-container {
         gap: 0px;
+    }
+
+    .shop-all-image {
+        max-width: 300px;
+    }
+
+    .shop-all-text {
+        display: none;
     }
 
 }
@@ -555,6 +578,20 @@ a {
 
     .payment-alternatives {
         margin: 30px 0px 30px 50px;
+    }
+
+}
+
+@media(min-width:820px) {
+
+    .fa-bars {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        font-size: 20px;
+        gap: 30px;
     }
 
 }
