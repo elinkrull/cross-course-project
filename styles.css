@@ -22,6 +22,7 @@ body {
 }
 
 .header-content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -29,13 +30,22 @@ body {
     background-color: rgba(126, 194, 216, 0.34);
 }
 
-header nav a {
-    color: black;
-    display: inline-block;
-    padding: 0px 20px;
-    margin: 0px 30px;
-    font-size: 18px;
-    text-decoration: none;
+#hamburger-checkbox:checked ~ nav {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+}
+
+nav, #hamburger-checkbox {
+    display: none;
+}
+
+.fa-bars {
+    position: absolute;
+    font-size: 16px;
+    bottom: 20px;
+    left: 20px;
 }
 
 .search-field {
@@ -81,7 +91,7 @@ header nav a {
     justify-content: center;
     margin-top: 20px;
     padding-top: 20px;
-    gap: 100px;
+    gap: 200px;
     background-color: rgba(126, 194, 216, 0.34);
 }
 
@@ -121,6 +131,7 @@ a {
 /* index page */
 
 .shop {
+    overflow: hidden;
     display: flex;
     align-items: flex-end;
     max-width: 100%;
@@ -192,6 +203,7 @@ a {
 
 .best-sellers-jackets {
     flex: 1 0 300px;
+    text-align: center;
 }
 
 .best-sellers-jackets-container {
@@ -215,12 +227,11 @@ a {
 
 .newsletter-text {
     display: flex;
-    font-family: poppin;
+    font-family: sans-serif;
     font-size: 26px;
-    position: absolute;
+    position: relative;
     text-align: center;
-    left: 150px;
-    top: 100px;
+    padding: 20px;
 }
 
 .shopping {
@@ -231,9 +242,10 @@ a {
 /* product page*/
 
 .all-jackets {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .all-jackets-container {
@@ -251,9 +263,10 @@ a {
 /* product spesific page*/
 
 .main-container {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 800px;
     margin: 50px auto;
-    display: flex;
     gap: 30px;
 }
 
@@ -273,7 +286,6 @@ a {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    border-radius: 5%;
     border: none;
     padding: 8px 140px;
     margin-top: 20px;
@@ -281,12 +293,16 @@ a {
 
 /* cart page */
 
+.shopping-bag-header {
+    font-size: 20px;
+}
+
 .cart-container {
     display: flex;
-    height: 700px;
-    width: 1200px;
+    flex-wrap: wrap;
+    max-width: 1200px;
     background-color:rgba(245, 245, 245, 1);
-    padding: 20px;
+    padding: 20px 0px;
     margin: 50px auto;
 }
 
@@ -309,37 +325,49 @@ a {
     padding: 8px 160px;
 }
 
+.everest-shopping-bag {
+    max-width: 300px;
+}
+
 
 /* delivery page */
 
 .delivery-container {
+    max-width: 1200px;
     display: grid;
+    grid-template-columns: 50% 50%;
     background-color: rgba(245, 245, 245, 1);
     border: none;
-    margin: 50px;
+    margin: 50px auto;
+}
+
+.delivery-label {
+    display: block; 
+    margin: 10px 0px;
 }
 
 .radiobutton {
     border: 1px solid black;
     background-color: white;
-    margin: 20px;
+    padding: 20px;
+    margin: 40px 0px;
 }
 
 .pay-next-button {
-    padding: 10px 165px;
-    margin-left: 20px;
+    padding: 15px 200px;
 }
 
 /* payment page */
 
 .payment-alternatives {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 30px 250px;
     border: none;
-    margin-left: 40px;
 }
 
 .payment-header {
     font-size: 20px;
-    margin: 20px;
 }
 
 .payment-card {
@@ -350,10 +378,16 @@ a {
 }
 
 .payment-card-info, .payment-info {
+    display: flex;
+    flex-direction: column;
     border: none;
     background-color: rgba(245, 245, 245, 1);
     width: 400px;
     margin: 20px;
+}
+
+.payment-card-info {
+    gap: 10px;
 }
 
 .payment-info {
@@ -362,7 +396,7 @@ a {
 }
 
 .pay-button {
-    padding: 8px 60px;
+    padding: 10px 80px;
 }
 
 /* checkout page*/
@@ -384,22 +418,21 @@ a {
 .contact-content {
     max-width: 1200px;
     display: flex;
-    margin: 20px auto;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
+    margin: 40px auto;
 }
 
 .contact-form {
     width: 400px;
     height: 350px;
-    display: grid;
     background-color: rgba(245, 245, 245, 1);
     padding: 20px;
     margin-right: 20px;
 }
 
-main form label {
+.contact-label {
     display: block;
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 .send-message-button {
@@ -415,88 +448,93 @@ main form label {
 }
 
 .woman-mountain {
-    width: 750px;
-    height: 500px;
+    max-width: 500px;
     object-fit: cover;
     object-position: 100% 40%;
 }
 
-/* about us page*/
+/* about page*/
 
-.camping {
-    max-width: 200px;
-}
-
-.about {
-    max-width: 1000px;
-    margin: 50px auto;
+.about-container {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1000px;
+    gap: 10px;
 }
 
-.about-image, .about-text {
-   flex: 1;
+.about-text {
+    max-width: 400px;
+    margin-left: 10px;
 }
 
 .about-image {
-    max-width: 50%;
-    padding: 20px;
+   max-width: 450px;
 }
-.about-text {
-    font-size: 18px;
-}
-
-
 /*-------------------------- styles ------------------------- */
 
 
 @media(max-width:1216px) {
 
-    body {
-            width: 100%;
-      }
-    
+
     .all-jackets {
         grid-template-columns: 1fr,1fr;
     }
     
 }
 
+@media(max-width:1216px) {
+    .add-to-cart-button {
+        padding: 6px 40px;
+    }
+}
+
 @media(max-width:700px) {
+
+    .logo {
+        max-width: 80px;
+    }
+
+    .search-field {
+        padding: 3px 5px;   
+     }
+
+     .bottom-section {
+        gap: 100px;
+    }
+
     .newsletter-text {
-        font-size: 20px;
-        left: 60px;
-        top: 200px;
+        font-size: 16px;
     }
     
     .newsletter {
         max-height: 300px;
         max-width: 100%;
     }
-}
 
+    .button, .pay-button, .cart-pay-button, .pay-next-button, .continue-shopping-button {
+        padding: 6px 40px;
+    }
+
+    .payment-alternatives {
+        margin: 30px 0px 30px 100px;
+    }
+
+    .main-container-info {
+        margin-left: 20px;
+    }
+
+    .main-container {
+        gap: 0px;
+    }
+
+}
 
 @media(max-width:480px) {
 
-    body {
-        width: 100%;
-    }
-
-    .logo {
-        max-width: 100px;
-    }
-
-    .search-field {
-       padding: 5px 10px;   
-    }
 
     .all-jackets {
         grid-template-columns: 1fr;
-    }
-
-    .about-image {
-        display: none;
     }
 
     .woman-mountain {
@@ -511,10 +549,12 @@ main form label {
         width: 90%;
     }
 
-    .bottom-section {
-        gap: 100px;
+    .about-image {
+        max-width: 300px;
     }
 
+    .payment-alternatives {
+        margin: 30px 0px 30px 50px;
+    }
 
 }
-

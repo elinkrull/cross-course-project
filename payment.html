@@ -40,12 +40,21 @@
             <form action="submit.php or formsuccess.php" method="POST">
                 <fieldset class="payment-alternatives">
                     <h1 class="payment-header">Payment</h1>
-                    <input type="radio" id="invoice" name="payment method" value="invoice">
-                    <label for="invoice">Invoice</label>
-                    <input type="radio" id="paypal" name="payment method" value="paypal">
-                    <label for="paypal">Paypal</label>
-                    <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
-                    <label for="credit-/debit carn">Credit-/debit card</label>
+                    <div>
+                        <input type="radio" id="invoice" name="payment method" value="invoice">
+                        <label for="invoice">Invoice</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="paypal" name="payment method" value="paypal">
+                        <label for="paypal" class="paypal-icon">Paypal</label>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                    </div>
+                    <div>
+                        <input type="radio" id="credit-/debit card" name="payment method" value="credit-/debitcard">
+                        <label for="credit-/debit carn">Credit-/debit card</label>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
                 </fieldset>
                 <div class="payment-card">
                     <fieldset class="payment-card-info">
@@ -59,8 +68,10 @@
                         <input type="text" name="cvc" id="cvc" class="form input" required>
                     </fieldset>
                     <div class="payment-info">
-                        <h2>Total amount: 2 299kr</h2>
-                        <a href="checkout.html" class="button pay-button">PAY NOW</a>
+                        <div>
+                            <h1>Total amount: 2 299kr</h1>
+                            <a href="checkout.html" class="button pay-button">PAY NOW</a>
+                        </div>
                     </div>
                 </div>
             </form>
