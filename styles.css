@@ -251,6 +251,12 @@ a {
 
 /* product page*/
 
+.products-header {
+    font-size: 26px;
+    margin: 40px;
+    text-align: center;
+}
+
 .all-jackets {
     display: flex;
     flex-wrap: wrap;
