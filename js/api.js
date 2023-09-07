@@ -6,12 +6,6 @@ async function makeApiCall() {
 
     const results = await response.json();
 
-    // const objects = results.all;
-
-    // for (let i = 0; i < objects.length; i++) {
-    //   console.log(objects[i].text);
-    // }
-
     console.log(results);
   } catch (error) {
     console.log(error);
