@@ -138,10 +138,6 @@ a {
     color: white; 
 } 
 
-.loader {
-
-}
-
 /* index page */
 
 .shop {
@@ -215,17 +211,15 @@ a {
     flex-wrap: wrap;
 }
 
-.best-sellers-jackets {
-    flex: 1 0 300px;
+#best-sellers-jackets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
 }
 
 .best-sellers-jackets-container {
-    max-width: 250px;
-}
-
-.index-everest, .index-biker, .index-runner-light, .index-racer {
-    max-width: 250px;
+    display: flex;
 }
 
 .newsletter {
@@ -273,7 +267,7 @@ a {
     margin: 30px;
 }
 
-.everest, .everyday, .runner, .biker, .runner_light, .racer {
+.images-js {
     width: 350px;
     height: 400px;
     object-fit: cover;
