@@ -261,7 +261,7 @@ a {
     text-align: center;
 }
 
-.all-jackets {
+#all-jackets {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -278,7 +278,6 @@ a {
     height: 400px;
     object-fit: cover;
 }
-
 
 /* product spesific page*/
 
