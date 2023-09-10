@@ -273,9 +273,9 @@ a {
     object-fit: cover;
 }
 
-/* product spesific page*/
+/* product specific page*/
 
-.main-container {
+#spesific-jacket-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;

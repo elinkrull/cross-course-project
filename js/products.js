@@ -8,7 +8,7 @@ async function displayJackets() {
 
   for (let jacket of jackets) {
     jacketsContainer.innerHTML += `<div class="all-jackets-container">
-                                    <img src="${jacket.image}" alt="${jacket.description}" class="images-js">
+                                    <a href="specificproduct.html?id=${jacket.id}"><img src="${jacket.image}" alt="${jacket.description}" class="images-js"></a>
                                     <h2>${jacket.title}</h2>
                                     <p>USD ${jacket.price}</p>
                                     </div>`;
@@ -16,3 +16,5 @@ async function displayJackets() {
 }
 
 displayJackets();
+
+export { displayJackets };
