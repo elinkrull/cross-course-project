@@ -15,23 +15,7 @@ makeApiCall();
 
 export { makeApiCall };
 
-// Getting the specific jacket:
 
-const queryString = document.location.search;
-
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-
-async function getSpecificJacket() {
-  const response = await fetch(url + id);
-
-  const specificJacket = await response.json();
-
-  return specificJacket;
-}
-
-export { getSpecificJacket };
 
 // Display the jackets on the index.html page:
 
@@ -39,9 +23,7 @@ async function displayJackets() {
   const jackets = await makeApiCall();
   console.log(jackets);
 
-  const jacketFrontPageContainer = document.getElementById(
-    "best-sellers-jackets"
-  );
+  const jacketFrontPageContainer = document.getElementById("best-sellers-jackets");
 
   for (let i = 0; i < 4; i++) {
     console.log(jackets[i]);
@@ -51,7 +33,7 @@ async function displayJackets() {
                                         <h2>${jackets[i].title}</h2>
                                         <p>USD ${jackets[i].price}</p>
                                         </div>`;
-  }
+ }
 }
 
 displayJackets();
