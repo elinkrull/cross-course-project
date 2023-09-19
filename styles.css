@@ -205,12 +205,6 @@ a {
     padding: 12px;
 }
 
-.best-sellers {
-    display: flex;
-    margin: 30px auto;
-    flex-wrap: wrap;
-}
-
 #best-sellers-jackets {
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +213,8 @@ a {
 }
 
 .best-sellers-jackets-container {
-    display: flex;
+    max-width: 300px;
+    margin: 30px;
 }
 
 .newsletter {
@@ -275,7 +270,7 @@ a {
 
 /* product specific page*/
 
-#spesific-jacket-container {
+.spesific-jacket-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
