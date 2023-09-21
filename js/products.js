@@ -5,8 +5,10 @@ const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 async function getJackets() {
     const response = await fetch(urlRainyDays);
     const result = await response.json();
+    
     return result;
 }
+
 
 
 
@@ -21,7 +23,7 @@ for (let i = 0; i < 8; i++) {
   console.log(allJackets);
 
 
-  jacketsProductPageContainer.innerHTML += `<div class=("all-jackets-container")>
+  jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
                                            <a href="specificproduct.html?id=${allJackets}"><img src="${allJackets.image}" alt="${allJackets.description}" class="images-js"></a>
                                           <h2>${allJackets.title}</h2>
                                           <p>USD ${allJackets.price}</p>
