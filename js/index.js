@@ -11,7 +11,8 @@ async function getJackets() {
 // Display the jackets on the index.html page:
 
 async function displayJackets() {
-  const jackets = await getJackets() 
+  const jackets = await getJackets()
+  
   const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
 
 
@@ -20,9 +21,9 @@ async function displayJackets() {
     console.log(jacket);
 
     jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
-                                        <a href="specificproduct.html?id=${jackets[i].id}"><img src="${jackets[i].image}" alt="${jackets[i].description} "class="images-js"></a>
-                                        <h2>${jackets[i].title}</h2>
-                                        <p>USD ${jackets[i].price}</p>
+                                        <a href="specificproduct.html?id=${jacket.id}"><img src="${jacket.image}" alt="${jacket.description} "class="images-js"></a>
+                                        <h2>${jacket.title}</h2>
+                                        <p>USD ${jacket.price}</p>
                                         </div>`;
  }
 }
