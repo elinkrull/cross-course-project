@@ -22,9 +22,8 @@ async function getJackets() {
 }
 
 
-
-
 async function displayAllJackets() {
+  try {
   const productJackets = await getJackets();
   console.log(productJackets);
 
@@ -40,7 +39,10 @@ for (let i = 0; i < 8; i++) {
                                           <h2>${allJackets.title}</h2>
                                           <p>USD ${allJackets.price}</p>
                                           </div>`;
- }
+ } 
+  } catch (error) {
+      showError(message);
+  }
 }
 
 displayAllJackets();

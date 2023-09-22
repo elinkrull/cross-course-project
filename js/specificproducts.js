@@ -11,22 +11,30 @@ function showError(message) {
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getJackets() {
-    const response = await fetch(urlRainyDays);
+  try {  
+  const response = await fetch(urlRainyDays);
     const result = await response.json();
-    
     return result;
+  } catch (error) {
+    throw new Error("Sorry, we could not fetch the jackets");
+  }
 }
 
 
 // Function to extract the jacket ID from the query parameter
 function getJacketIdFromQuery() {
+    try {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
     return id;
+  } catch (error) {
+    throw new Error("Sorry, we could not fetch the Id's");
   }
+}
   
   // Function to fetch jacket details using the jacket ID and populate the details section
   async function fetchJacketDetail() {
+    try {
     const jacketId = getJacketIdFromQuery();
     const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
     const jacketDetail = await response.json();
@@ -59,7 +67,10 @@ function getJacketIdFromQuery() {
         </div>
         </div> 
         `;
-        }
+}
+    } catch (error) {
+        showError(message);
+    }
 
 fetchJacketDetail();
 
