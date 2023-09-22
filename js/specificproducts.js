@@ -16,32 +16,50 @@ async function getJackets() {
     const result = await response.json();
     return result;
   } catch (error) {
-    throw new Error("Sorry, we could not fetch the jackets");
+    throw new Error("Sorry, we could not fetch the jacket you are looking for");
   }
 }
 
-
 // Function to extract the jacket ID from the query parameter
 function getJacketIdFromQuery() {
-    try {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
-    return id;
-  } catch (error) {
-    throw new Error("Sorry, we could not fetch the Id's");
-  }
+  try {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  return id;
+} catch (error) {
+  throw new Error("Sorry, we could not fetch the Id's");
+}
+}
+
+// Function to extract the jacket title from the query parameter
+function getJacketTitleFromQuery() {
+  try {
+  const urlParams = new URLSearchParams(window.location.search);
+  const title = urlParams.get("title");
+  return title;
+} catch (error) {
+  throw new Error("Sorry, we could not fetch the Title's");
+}
 }
   
   // Function to fetch jacket details using the jacket ID and populate the details section
   async function fetchJacketDetail() {
     try {
     const jacketId = getJacketIdFromQuery();
+
+    const title = getJacketTitleFromQuery();
+    
+    if(!jacketId)
+    showError(message);
+
     const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
     const jacketDetail = await response.json();
             
-
+    const jacketTitleContainer = document.getElementById("title");
     const jacketDetailContainer = document.getElementById("main-container");
 
+//Add jacket title to the title of the page
+    jacketTitleContainer.textContent += `title`;
     jacketDetailContainer.innerHTML += `
         <div class="main-container-jacket">
         <img src=${jacketDetail.image} alt=${jacketDetail.description} class="images-js">
@@ -68,9 +86,7 @@ function getJacketIdFromQuery() {
         </div> 
         `;
 }
-    } catch (error) {
-        showError(message);
-    }
-
+  }
+  
 fetchJacketDetail();
 
