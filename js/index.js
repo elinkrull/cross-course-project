@@ -1,18 +1,34 @@
+//Error handling
+
+function showError(message) {
+  const errorContainer = document.getElementById("best-sellers-jackets");
+  const message = ("Sorry, something went wrong");
+  errorContainer.innerHTML += `<h2>${message}</h2>`;
+}
+
+
+
 //  API call
 
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getJackets() {
+  try {
     const response = await fetch(urlRainyDays);
     const result = await response.json();
     return result;
+  } catch (error) {
+    throw new Error("Sorry, we could not fetch the jackets");
+  }
 }
+
 
 // Display the jackets on the index.html page:
 
 async function displayJackets() {
-  const jackets = await getJackets()
   
+  try {
+  const jackets = await getJackets();
   const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
 
 
@@ -27,6 +43,11 @@ async function displayJackets() {
                                         </div>`;
  }
 }
+  catch (error) {
+    showError(message);
+  }
+}
+
 
 displayJackets();
 

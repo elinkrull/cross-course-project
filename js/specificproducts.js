@@ -14,7 +14,6 @@ async function getJackets() {
 function getJacketIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
-    
     return id;
   }
   
