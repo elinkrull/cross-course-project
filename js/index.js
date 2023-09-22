@@ -6,8 +6,6 @@ function showError(message) {
   errorContainer.innerHTML += `<h2>${message}</h2>`;
 }
 
-
-
 //  API call
 
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
@@ -42,8 +40,7 @@ async function displayJackets() {
                                         <p>USD ${jacket.price}</p>
                                         </div>`;
  }
-}
-  catch (error) {
+} catch (error) {
     showError(message);
   }
 }

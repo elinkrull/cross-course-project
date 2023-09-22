@@ -1,3 +1,11 @@
+//Error handling
+
+function showError(message) {
+    const errorContainer = document.getElementById("main-container");
+    const message = ("Sorry, something went wrong");
+    errorContainer.innerHTML += `<h2>${message}</h2>`;
+  }
+
 //  API call
 
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";

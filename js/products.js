@@ -1,12 +1,24 @@
+//Error handling
+
+function showError(message) {
+  const errorContainer = document.getElementById("all-jackets");
+  const message = ("Sorry, something went wrong");
+  errorContainer.innerHTML += `<h2>${message}</h2>`;
+}
+
+
 //  API call
 
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getJackets() {
-    const response = await fetch(urlRainyDays);
+  try {  
+  const response = await fetch(urlRainyDays);
     const result = await response.json();
-    
     return result;
+  } catch (error) {
+    throw new Error("Sorry, we could not fetch the jackets");
+  }
 }
 
 
