@@ -2,7 +2,6 @@
 
 function showError(message) {
   const errorContainer = document.getElementById("best-sellers-jackets");
-  const message = ("Sorry, something went wrong");
   errorContainer.innerHTML += `<h2>${message}</h2>`;
 }
 
@@ -32,16 +31,15 @@ async function displayJackets() {
 
   for (let i = 0; i < 4; i++) {
     const jacket = jackets[i];
-    console.log(jacket);
 
     jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
-                                        <a href="specificproduct.html?id=${jacket.id}"><img src="${jacket.image}" alt="${jacket.description} "class="images-js"></a>
+                                        <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description} "class="images-js"></a>
                                         <h2>${jacket.title}</h2>
                                         <p>USD ${jacket.price}</p>
                                         </div>`;
  }
 } catch (error) {
-    showError(message);
+    showError(error.message);
   }
 }
 

@@ -261,7 +261,7 @@ a {
 }
 
 .images-js {
-    width: 350px;
+    max-width: 300px;
     height: 400px;
     object-fit: cover;
 }

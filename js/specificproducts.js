@@ -2,23 +2,9 @@
 
 function showError(message) {
     const errorContainer = document.getElementById("main-container");
-    const message = ("Sorry, something went wrong");
     errorContainer.innerHTML += `<h2>${message}</h2>`;
   }
 
-//  API call
-
-const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
-
-async function getJackets() {
-  try {  
-  const response = await fetch(urlRainyDays);
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    throw new Error("Sorry, we could not fetch the jacket you are looking for");
-  }
-}
 
 // Function to extract the jacket ID from the query parameter
 function getJacketIdFromQuery() {
@@ -27,7 +13,7 @@ function getJacketIdFromQuery() {
   const id = urlParams.get("id");
   return id;
 } catch (error) {
-  throw new Error("Sorry, we could not fetch the Id's");
+  throw new Error("Sorry, we could not fetch the Id");
 }
 }
 
@@ -38,7 +24,7 @@ function getJacketTitleFromQuery() {
   const title = urlParams.get("title");
   return title;
 } catch (error) {
-  throw new Error("Sorry, we could not fetch the Title's");
+  throw new Error("Sorry, we could not fetch the Title");
 }
 }
   
@@ -59,7 +45,7 @@ function getJacketTitleFromQuery() {
     const jacketDetailContainer = document.getElementById("main-container");
 
 //Add jacket title to the title of the page
-    jacketTitleContainer.textContent += `title`;
+    jacketTitleContainer.textContent = title;
     jacketDetailContainer.innerHTML += `
         <div class="main-container-jacket">
         <img src=${jacketDetail.image} alt=${jacketDetail.description} class="images-js">
@@ -85,7 +71,9 @@ function getJacketTitleFromQuery() {
         </div>
         </div> 
         `;
-}
+      } catch (error) {
+        showError(error.message);
+    }
   }
   
 fetchJacketDetail();

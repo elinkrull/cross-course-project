@@ -2,7 +2,6 @@
 
 function showError(message) {
   const errorContainer = document.getElementById("all-jackets");
-  const message = ("Sorry, something went wrong");
   errorContainer.innerHTML += `<h2>${message}</h2>`;
 }
 
@@ -25,23 +24,20 @@ async function getJackets() {
 async function displayAllJackets() {
   try {
   const productJackets = await getJackets();
-  console.log(productJackets);
+  const jacketsProductPageContainer = document.getElementById("all-jackets");
 
-const jacketsProductPageContainer = document.getElementById("all-jackets");
-
-for (let i = 0; i < 8; i++) {
-  const allJackets = productJackets[i];
-  console.log(allJackets);
-
+for (let i = 0; productJackets.length; i++) {
+  const jacket = productJackets[i];
+  console.log(jacket);
 
   jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
-                                           <a href="specificproduct.html?id=${allJackets}"><img src="${allJackets.image}" alt="${allJackets.description}" class="images-js"></a>
-                                          <h2>${allJackets.title}</h2>
-                                          <p>USD ${allJackets.price}</p>
+                                           <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description}" class="images-js"></a>
+                                          <h2>${jacket.title}</h2>
+                                          <p>USD ${jacket.price}</p>
                                           </div>`;
  } 
   } catch (error) {
-      showError(message);
+      showError(error.message);
   }
 }
 
