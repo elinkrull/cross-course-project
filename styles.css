@@ -31,7 +31,11 @@ body {
 #hamburger-checkbox:checked ~ nav {
     display: block;
     position: absolute;
-    bottom: -80px;
+    bottom: -95px;
+    left: 5px;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
 }
 
 nav, #hamburger-checkbox {
@@ -546,6 +550,10 @@ a {
 
     .shop-all-text {
         display: none;
+    }
+
+    .shop-all-button {
+        left: 110px;
     }
 
 }

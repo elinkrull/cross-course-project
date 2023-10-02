@@ -26,9 +26,8 @@ async function displayAllJackets() {
   const productJackets = await getJackets();
   const jacketsProductPageContainer = document.getElementById("all-jackets");
 
-for (let i = 0; productJackets.length; i++) {
+for (let i = 0; i < productJackets.length; i++) {
   const jacket = productJackets[i];
-  console.log(jacket);
 
   jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
                                            <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description}" class="images-js"></a>
