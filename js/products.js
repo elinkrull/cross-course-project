@@ -5,13 +5,20 @@ function showError(message) {
   errorContainer.innerHTML += `<h2>${message}</h2>`;
 }
 
+//Loading indicator
+
+function showLoadingIndicator() {
+  const loadingIndicator = document.getElementById("all-jackets");
+  loadingIndicator.innerHTML = "<li>Loading...</li>"
+}
 
 //  API call
 
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getJackets() {
-  try {  
+  try { 
+  showLoadingIndicator();
   const response = await fetch(urlRainyDays);
     const result = await response.json();
     return result;
@@ -25,10 +32,10 @@ async function displayAllJackets() {
   try {
   const productJackets = await getJackets();
   const jacketsProductPageContainer = document.getElementById("all-jackets");
+  jacketsProductPageContainer.innerHTML = "";
 
-for (let i = 0; productJackets.length; i++) {
+for (let i = 0; i < productJackets.length; i++) {
   const jacket = productJackets[i];
-  console.log(jacket);
 
   jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
                                            <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description}" class="images-js"></a>
@@ -36,6 +43,7 @@ for (let i = 0; productJackets.length; i++) {
                                           <p>USD ${jacket.price}</p>
                                           </div>`;
  } 
+
   } catch (error) {
       showError(error.message);
   }

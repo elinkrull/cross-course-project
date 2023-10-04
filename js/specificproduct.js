@@ -5,16 +5,22 @@ function showError(message) {
   errorContainer.innerHTML += `<h2>${message}</h2>`;
 }
 
+//Loading indicator
+
+function showLoadingIndicator() {
+  const loadingIndicator = document.getElementById("main-container");
+  loadingIndicator.innerHTML = "<li>Loading...</li>"
+}
 
 // Function to extract the jacket ID from the query parameter
 function getJacketIdFromQuery() {
-try {
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
-return id;
-} catch (error) {
-throw new Error("Sorry, we could not fetch the Id");
-}
+  try {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  return id;
+  } catch (error) {
+  throw new Error("Sorry, we could not fetch the Id");
+  }
 }
 
 // Function to extract the jacket title from the query parameter
@@ -31,6 +37,7 @@ throw new Error("Sorry, we could not fetch the Title");
 // Function to fetch jacket details using the jacket ID and populate the details section
 async function fetchJacketDetail() {
   try {
+  showLoadingIndicator();
   const jacketId = getJacketIdFromQuery();
 
   const title = getJacketTitleFromQuery();
@@ -43,6 +50,7 @@ async function fetchJacketDetail() {
           
   const jacketTitleContainer = document.getElementById("title");
   const jacketDetailContainer = document.getElementById("main-container");
+  jacketDetailContainer.innerHTML = "";
 
 //Add jacket title to the title of the page
   jacketTitleContainer.textContent = title;
