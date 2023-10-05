@@ -1,5 +1,7 @@
 //Error handling
 
+// hello
+
 function showError(message) {
   const errorContainer = document.getElementById("main-container");
   errorContainer.innerHTML += `<h2>${message}</h2>`;
