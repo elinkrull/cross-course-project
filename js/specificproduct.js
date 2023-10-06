@@ -58,13 +58,12 @@ async function fetchJacketDetail() {
   jacketDetailContainer.innerHTML += `
       <div class="main-container-jacket">
       <img src=${jacketDetail.image} alt=${jacketDetail.description} class="images-js">
-      <h2>${jacketDetail.title}</h2>
-      <p>USD ${jacketDetail.price}</p>
       </div>
       <div class="main-container-info">              
       <div>
-          <h1>Description</h1>
+          <h1>${jacketDetail.title}</h1> 
           <p>${jacketDetail.description}</p>
+          <p>USD ${jacketDetail.price}</p>
       </div>
       <div>
           <h3>Choose size</h3>
@@ -89,6 +88,12 @@ sizeButtons.forEach((sizeButton) => {
     sizeButton.style.backgroundColor = "lightgrey";
   });
 })
+
+// const atcButton = fetchJacketDetail.querySelector(".add-to-cart-button");
+
+// atcButton.addEventListener("click", (event) => {
+//   console.log(event)
+// })
 
 
     } catch (error) {
