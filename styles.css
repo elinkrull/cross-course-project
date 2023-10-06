@@ -293,6 +293,7 @@ a {
 .size-button {
     padding: 10px 20px;
     margin: 5px;
+    background-color: white;
 }
 
 /* cart page */
@@ -301,7 +302,7 @@ a {
     font-size: 20px;
 }
 
-.cart-container {
+#cart-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -310,7 +311,7 @@ a {
     margin: 50px auto;
 }
 
-#shopping-bag-container, .cart-container-2 {
+.shopping-bag-container, .shopping-bag-container2 {
     padding: 20px;
     margin: 10px auto;
     background-color: white;

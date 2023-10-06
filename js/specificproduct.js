@@ -96,11 +96,19 @@ sizeButtons.forEach((sizeButton) => {
 });
 
 //function to change color on the add to cart button
+// const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
+
+// addToCartButton.addEventListener("click",() => {
+//   addToCartButton.style.backgroundColor = "lightgreen"
+// })
+
 const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
 
-addToCartButton.addEventListener("click",() => {
-  addToCartButton.style.backgroundColor = "lightgreen"
-})
+ function addToCartClicked() {
+  console.log("added to cart");
+ }
+
+ addToCartButton.addEventListener("click", addToCartClicked);
 
     } catch (error) {
       showError(error.message);
