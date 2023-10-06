@@ -75,10 +75,26 @@ async function fetchJacketDetail() {
           <button class="size-button">L</button>
           <button class="size-button">XL</button>
       <div>
-          <a><button class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
+        <div id="customAlertBox" class="hidden">
+          <p>New item added to cart</p>
+        </div>
+        <a><button class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
       </div>
       </div> 
       `;
+
+const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
+const customAlertBox = document.getElementById("customAlertBox");
+
+addToCartButton.addEventListener("click", () => {
+  customAlertBox.style.display = "block";
+  
+//  Added delay to hide the box 
+  setTimeout(() => {
+    customAlertBox.style.display = "none";
+  }, 2000); 
+});
+
 
 //function to change color on the size button when being clicked
 const sizeButtons = jacketDetailContainer.querySelectorAll(".size-button");
@@ -95,20 +111,11 @@ sizeButtons.forEach((sizeButton) => {
   });
 });
 
-//function to change color on the add to cart button
+// function to change color on the add to cart button
 // const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
 
-// addToCartButton.addEventListener("click",() => {
-//   addToCartButton.style.backgroundColor = "lightgreen"
-// })
 
-const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
 
- function addToCartClicked() {
-  console.log("added to cart");
- }
-
- addToCartButton.addEventListener("click", addToCartClicked);
 
     } catch (error) {
       showError(error.message);
