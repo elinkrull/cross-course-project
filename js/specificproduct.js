@@ -75,7 +75,7 @@ async function fetchJacketDetail() {
           <button class="size-button">L</button>
           <button class="size-button">XL</button>
       <div>
-          <a href="cart.html"><button class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
+          <a><button class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
       </div>
       </div> 
       `;
@@ -84,17 +84,23 @@ async function fetchJacketDetail() {
 const sizeButtons = jacketDetailContainer.querySelectorAll(".size-button");
 
 sizeButtons.forEach((sizeButton) => {
+  let originalColor = sizeButton.style.backgroundColor || "initial"; // Store the original color
+
   sizeButton.addEventListener("click", () => {
-    sizeButton.style.backgroundColor = "lightgrey";
+    if (sizeButton.style.backgroundColor === "lightgrey") {
+      sizeButton.style.backgroundColor = originalColor; // Restore original color
+    } else {
+      sizeButton.style.backgroundColor = "lightgrey"; // Set to lightgrey
+    }
   });
+});
+
+//function to change color on the add to cart button
+const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
+
+addToCartButton.addEventListener("click",() => {
+  addToCartButton.style.backgroundColor = "lightgreen"
 })
-
-// const atcButton = fetchJacketDetail.querySelector(".add-to-cart-button");
-
-// atcButton.addEventListener("click", (event) => {
-//   console.log(event)
-// })
-
 
     } catch (error) {
       showError(error.message);
