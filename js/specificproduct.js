@@ -9,53 +9,53 @@ function showError(message) {
 
 function showLoadingIndicator() {
   const loadingIndicator = document.getElementById("main-container");
-  loadingIndicator.innerHTML = "<li>Loading...</li>"
+  loadingIndicator.innerHTML = "<li>Loading...</li>";
 }
 
 // Function to extract the jacket ID from the query parameter
 function getJacketIdFromQuery() {
   try {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id");
-  return id;
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    return id;
   } catch (error) {
-  throw new Error("Sorry, we could not fetch the Id");
+    throw new Error("Sorry, we could not fetch the Id");
   }
 }
 
 // Function to extract the jacket title from the query parameter
-  function getJacketTitleFromQuery() {
+function getJacketTitleFromQuery() {
   try {
-  const urlParams = new URLSearchParams(window.location.search);
-  const title = urlParams.get("title");
-  return title;
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get("title");
+    return title;
   } catch (error) {
-  throw new Error("Sorry, we could not fetch the Title");
+    throw new Error("Sorry, we could not fetch the Title");
   }
 }
-
 
 // Function to fetch jacket details using the jacket ID and populate the details section
 async function fetchJacketDetail() {
   try {
-  showLoadingIndicator();
-  const jacketId = getJacketIdFromQuery();
+    showLoadingIndicator();
+    const jacketId = getJacketIdFromQuery();
 
-  const title = getJacketTitleFromQuery();
-  
-  if(!jacketId)
-  showError(message);
+    const title = getJacketTitleFromQuery();
 
-  const response = await fetch(`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`);
-  const jacketDetail = await response.json();
-          
-  const jacketTitleContainer = document.getElementById("title");
-  const jacketDetailContainer = document.getElementById("main-container");
-  jacketDetailContainer.innerHTML = "";
+    if (!jacketId) showError(message);
 
-//Add jacket title to the title of the page
-  jacketTitleContainer.textContent = title;
-  jacketDetailContainer.innerHTML += `
+    const response = await fetch(
+      `https://api.noroff.dev/api/v1/rainy-days/${jacketId}`
+    );
+    const jacketDetail = await response.json();
+
+    const jacketTitleContainer = document.getElementById("title");
+    const jacketDetailContainer = document.getElementById("main-container");
+    jacketDetailContainer.innerHTML = "";
+
+    //Add jacket title to the title of the page
+    jacketTitleContainer.textContent = title;
+    jacketDetailContainer.innerHTML += `
       <div class="main-container-jacket">
       <img src=${jacketDetail.image} alt=${jacketDetail.description} class="images-js">
       </div>
@@ -83,45 +83,37 @@ async function fetchJacketDetail() {
       </div> 
       `;
 
-const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
-const customAlertBox = document.getElementById("customAlertBox");
+    const addToCartButton = jacketDetailContainer.querySelector(
+      ".add-to-cart-button"
+    );
+    const customAlertBox = document.getElementById("customAlertBox");
 
-addToCartButton.addEventListener("click", () => {
-  customAlertBox.style.display = "block";
-  
-//  Added delay to hide the box 
-  setTimeout(() => {
-    customAlertBox.style.display = "none";
-  }, 2000); 
-});
+    addToCartButton.addEventListener("click", () => {
+      customAlertBox.style.display = "block";
 
+      //  Added delay to hide the box
+      setTimeout(() => {
+        customAlertBox.style.display = "none";
+      }, 2000);
+    });
 
-//function to change color on the size button when being clicked
-const sizeButtons = jacketDetailContainer.querySelectorAll(".size-button");
+    //function to change color on the size button when being clicked
+    const sizeButtons = jacketDetailContainer.querySelectorAll(".size-button");
 
-sizeButtons.forEach((sizeButton) => {
-  let originalColor = sizeButton.style.backgroundColor || "initial"; // Store the original color
+    sizeButtons.forEach((sizeButton) => {
+      let originalColor = sizeButton.style.backgroundColor || "initial"; // Store the original color
 
-  sizeButton.addEventListener("click", () => {
-    if (sizeButton.style.backgroundColor === "lightgrey") {
-      sizeButton.style.backgroundColor = originalColor; // Restore original color
-    } else {
-      sizeButton.style.backgroundColor = "lightgrey"; // Set to lightgrey
-    }
-  });
-});
-
-// function to change color on the add to cart button
-// const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
-
-
-
-
-    } catch (error) {
-      showError(error.message);
+      sizeButton.addEventListener("click", () => {
+        if (sizeButton.style.backgroundColor === "lightgrey") {
+          sizeButton.style.backgroundColor = originalColor; // Restore original color
+        } else {
+          sizeButton.style.backgroundColor = "lightgrey"; // Set to lightgrey
+        }
+      });
+    });
+  } catch (error) {
+    showError(error.message);
   }
 }
 
 fetchJacketDetail();
-
-

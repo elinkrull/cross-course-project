@@ -9,7 +9,7 @@ function showError(message) {
 
 function showLoadingIndicator() {
   const loadingIndicator = document.getElementById("best-sellers-jackets");
-  loadingIndicator.innerHTML = "<li>Loading...</li>"
+  loadingIndicator.innerHTML = "<li>Loading...</li>";
 }
 
 //  API call
@@ -31,23 +31,24 @@ async function getJackets() {
 
 async function displayJackets() {
   try {
-  const jackets = await getJackets();
-  const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
-  jacketsFrontPageContainer.innerHTML = "";
+    const jackets = await getJackets();
+    const jacketsFrontPageContainer = document.getElementById(
+      "best-sellers-jackets"
+    );
+    jacketsFrontPageContainer.innerHTML = "";
 
-  for (let i = 0; i < 4; i++) {
-    const jacket = jackets[i];
+    for (let i = 0; i < 4; i++) {
+      const jacket = jackets[i];
 
-    jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
+      jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
                                         <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description} "class="images-js"></a>
                                         <h2>${jacket.title}</h2>
                                         <p>USD ${jacket.price}</p>
                                         </div>`;
- }
-} catch (error) {
+    }
+  } catch (error) {
     showError(error.message);
   }
 }
-
 
 displayJackets();
