@@ -66,7 +66,7 @@ async function fetchJacketDetail() {
           <p>USD ${jacketDetail.price}</p>
       </div>
       <div>
-          <h3>Choose size</h3>
+          <h2>Choose size</h2>
       </div>
       <div>
           <button class="size-button">XS</button>

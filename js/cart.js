@@ -27,15 +27,17 @@ function getJacketIdFromQuery() {
 async function fetchJacketDetail() {
   try {
   showLoadingIndicator();
-  	const jacketId = getJacketIdFromQuery();
+
+  const jacketId = getJacketIdFromQuery();
 
     
   if(!jacketId)
-  showError("Sorry, we could not fetch the jacket");
+  showError(message);
 
   const response = await fetch(
 	`https://api.noroff.dev/api/v1/rainy-days/${jacketId}`
   );
+  
   const jacketDetail = await response.json();
   console.log(jacketDetail);
           
@@ -76,3 +78,5 @@ async function fetchJacketDetail() {
 }
 
 fetchJacketDetail();
+
+

@@ -23,7 +23,7 @@ async function getJackets() {
     const result = await response.json();
     return result;
   } catch (error) {
-    throw new Error("Sorry, we could not fetch the jackets");
+    throw new Error("Sorry, something went wrong.");
   }
 }
 
@@ -32,9 +32,7 @@ async function getJackets() {
 async function displayJackets() {
   try {
     const jackets = await getJackets();
-    const jacketsFrontPageContainer = document.getElementById(
-      "best-sellers-jackets"
-    );
+    const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
     jacketsFrontPageContainer.innerHTML = "";
 
     for (let i = 0; i < 4; i++) {
