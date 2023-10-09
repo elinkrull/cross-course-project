@@ -95,7 +95,14 @@ async function fetchJacketDetail() {
       setTimeout(() => {
         customAlertBox.style.display = "none";
       }, 2000);
+
+	  const cartCountBox = document.getElementById("cart-count-box");
+
+	  addToCartButton.addEventListener("click", () => {
+		cartCountBox.style.display = "block";
+	  })
     });
+
 
     //function to change color on the size button when being clicked
     const sizeButtons = jacketDetailContainer.querySelectorAll(".size-button");
@@ -117,3 +124,4 @@ async function fetchJacketDetail() {
 }
 
 fetchJacketDetail();
+
