@@ -78,14 +78,28 @@ async function fetchJacketDetail() {
         <div id="customAlertBox" class="hidden">
           <p>New item added to cart</p>
         </div>
-        <a><button class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
+        <a><button id="button-count" class="add-to-cart-button" type="button"> ADD TO CART</button></a> 
       </div>
       </div> 
       `;
 
-    const addToCartButton = jacketDetailContainer.querySelector(
-      ".add-to-cart-button"
-    );
+	  
+    const addToCartButton = jacketDetailContainer.querySelector(".add-to-cart-button");
+
+	const cartCountBox = document.getElementById("cart-count-box");
+
+	var count = 0;
+	var countDisplay = document.getElementById("count");
+	addToCartButton.addEventListener("click", function() {
+		count++;
+		countDisplay.innerHTML = count;
+	});
+
+
+	  addToCartButton.addEventListener("click", () => {
+		cartCountBox.style.display = "block";
+	  });
+
     const customAlertBox = document.getElementById("customAlertBox");
 
     addToCartButton.addEventListener("click", () => {
@@ -95,12 +109,6 @@ async function fetchJacketDetail() {
       setTimeout(() => {
         customAlertBox.style.display = "none";
       }, 2000);
-
-	  const cartCountBox = document.getElementById("cart-count-box");
-
-	  addToCartButton.addEventListener("click", () => {
-		cartCountBox.style.display = "block";
-	  })
     });
 
 
