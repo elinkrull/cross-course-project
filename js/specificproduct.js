@@ -90,18 +90,21 @@ async function fetchJacketDetail() {
 
 	var count = 0;
 	var countDisplay = document.getElementById("count");
+
+	//function to display on the cart item how many items that are added 
 	addToCartButton.addEventListener("click", function() {
 		count++;
 		countDisplay.innerHTML = count;
 	});
 
 
-	  addToCartButton.addEventListener("click", () => {
+	addToCartButton.addEventListener("click", () => {
 		cartCountBox.style.display = "block";
-	  });
+	});
 
-    const customAlertBox = document.getElementById("customAlertBox");
-
+	//add alert box to confirm that item is added to cart
+	const customAlertBox = document.getElementById("customAlertBox");
+	
     addToCartButton.addEventListener("click", () => {
       customAlertBox.style.display = "block";
 
@@ -110,6 +113,7 @@ async function fetchJacketDetail() {
         customAlertBox.style.display = "none";
       }, 2000);
     });
+
 
 
     //function to change color on the size button when being clicked
@@ -125,6 +129,16 @@ async function fetchJacketDetail() {
           sizeButton.style.backgroundColor = "lightgrey"; // Set to lightgrey
         }
       });
+
+
+	  //function to restore size button color back to initial when atc button is clicked
+	  addToCartButton.addEventListener("click", () => {
+		if (sizeButton.style.backgroundColor === "lightgrey") {
+			sizeButton.style.backgroundColor = originalColor;
+		}
+	});
+
+
     });
   } catch (error) {
     showError(error.message);

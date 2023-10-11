@@ -29,7 +29,6 @@ async function fetchJacketDetail() {
   showLoadingIndicator();
 
   const jacketId = getJacketIdFromQuery();
-
     
   if(!jacketId)
   showError(message);
@@ -39,7 +38,6 @@ async function fetchJacketDetail() {
   );
   
   const jacketDetail = await response.json();
-  console.log(jacketDetail);
           
   const jacketDetailContainer = document.getElementById("cart-container");
   jacketDetailContainer.innerHTML = "";
@@ -62,7 +60,7 @@ async function fetchJacketDetail() {
                     <div>
                         <h3>Total:</h3>
                         <p>USD${jacketDetail.price}</p>
-                        <p>Shipping: $ 0</p>
+                        <p>Shipping: USD 0</p>
                         <p>USS</p>
                     </div>
                     <div>
