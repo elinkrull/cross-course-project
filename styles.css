@@ -327,7 +327,7 @@ a {
     font-size: 20px;
 }
 
-#cart-container {
+.cart-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -336,7 +336,7 @@ a {
     margin: 50px auto;
 }
 
-.shopping-bag-container, .shopping-bag-container2 {
+.cart-container-1, .cart-container-2 {
     padding: 20px;
     margin: 10px auto;
     background-color: white;
@@ -505,6 +505,32 @@ a {
 .about-image {
    max-width: 450px;
 }
+
+/* sizechart */
+
+/* reviews.html */
+
+#reviews-header, #review-h2, #review-text, .review-name {
+	text-align: center;
+}
+
+#reviews-header {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+#review-h2 {
+	font-size: 18px;
+}
+
+#review-text {
+	padding: 0px 350px;
+}
+
+.review-name {
+	padding-bottom: 30px;
+}
+
 /*-------------------------- styles ------------------------- */
 
 
