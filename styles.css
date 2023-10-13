@@ -508,6 +508,30 @@ a {
 
 /* sizechart */
 
+#size-guide-header, #size-guide-main-header  {
+	text-align: center;
+	margin: 30px;
+}
+
+#size-header {
+	text-decoration: underline;
+}
+
+#size-container {
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	margin-left: 30px;
+	padding: 20px;
+}
+
+#size-1, #size-2, #size-3, #size-4 {
+ display: grid;
+ grid-template-columns: repeat(6, 1 fr);
+ padding: 0px 30px;
+ border: 1px solid black;
+}
+
 /* reviews.html */
 
 #reviews-header, #review-h2, #review-text, .review-name {
