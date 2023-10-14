@@ -22,6 +22,7 @@ async function getJackets() {
     const response = await fetch(urlRainyDays);
     const result = await response.json();
     return result;
+
   } catch (error) {
     throw new Error("Sorry, something went wrong.");
   }
@@ -32,6 +33,7 @@ async function getJackets() {
 async function displayJackets() {
   try {
     const jackets = await getJackets();
+
     const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
     jacketsFrontPageContainer.innerHTML = "";
 

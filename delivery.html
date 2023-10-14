@@ -11,16 +11,16 @@
 		content="This page collect all the contact information and the delivery adresse. You also have to choose what shipping method you would like to use">
 	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
 	<!-- Hotjar Tracking Code for Interaction Design CA 2 -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3693067,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 3693067, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
 </head>
 
 <body>
@@ -53,18 +53,11 @@
 	</header>
 	<main>
 		<section>
-			<form>
+			<form action="submit.php or formsuccess.php" method="POST">
 				<fieldset class="delivery-container">
 					<div class="delivery-container-1">
 						<div>
-							<h1>Contact information</h1>
-						</div>
-						<div>
-							<label for="email" class="delivery-label">E-mail</label>
-							<input type="text" name="email" id="email" class="form__input">
-						</div>
-						<div>
-							<h2>Delivery Adresse</h2>
+							<h1>1. Delivery information</h1>
 						</div>
 						<div>
 							<label for="name" class="delivery-label">First name</label>
@@ -77,28 +70,72 @@
 							<input type="text" name="adresse" id="adresse" class="form__input">
 							<label for="adresse" class="delivery-label">City</label>
 							<input type="text" name="adresse" id="adresse" class="form__input">
+							<label for="email" class="delivery-label">E-mail</label>
+							<input type="text" name="email" id="email" class="form__input">
 							<label for="phone" class="delivery-label">Mobile phone</label>
 							<input type="tel" name="phone" id="phone" class="form__input">
 						</div>
 					</div>
-					<div class="delivery-container-2">
+					<div class="shipping-container">
 						<div>
-							<h2>Shipping</h2>
+							<h2>2. Shipping</h2>
 						</div>
 						<div class="radiobutton">
 							<input type="radio" id="pickup" name="shipping" value="pickup">
-							<label for="pickup">Pick up the package by post in store<br>(Post nord)<br>(0 kr)</label>
+							<label for="pickup"> Post Nord<br>Pick up the package by post in store (USD 0)</br>
+								<br>The package is delivered to your nearest delivery point within 1 to 4 working
+								days.</br></label>
 						</div>
 						<div class="radiobutton">
 							<input type="radio" id="porterbuddy" name="shipping" value="porterbuddy">
-							<label for="porterbuddy">Porterbuddy<br>(49 kr)</label>
+							<label for="porterbuddy">Porterbuddy (1-4 days delivery)<br>(49 kr)</label>
 						</div>
 						<div>
 							<a href="payment.html" class="button pay-next-button">Next</a>
 						</div>
 					</div>
-				</fieldset>
-			</form>
+					<div class="payment-alternatives">
+						<h2 class="payment-header">3. Payment</h2>
+						<div class="payment">
+							<input type="radio" id="invoice" name="payment method" value="invoice" />
+							<label for="invoice">Invoice</label>
+						</div>
+						<div class="payment">
+							<input type="radio" id="vipps" name="payment method" value="vipps" />
+							<label for="vipps" class="paypal-icon">Vipps</label>
+							<i class="fa-brands fa-cc-paypal"></i>
+						</div>
+						<div class="payment">
+							<input type="radio" id="paypal" name="payment method" value="paypal" />
+							<label for="paypal" class="paypal-icon">Paypal</label>
+							<i class="fa-brands fa-cc-paypal"></i>
+						</div>
+						<div class="payment">
+							<input type="radio" id="credit-/debit card" name="payment method"
+								value="credit-/debitcard" />
+							<label for="credit-/debit carn">Credit-/debit card</label>
+							<i class="fa-brands fa-cc-visa"></i>
+							<i class="fa-brands fa-cc-mastercard"></i>
+						</div>
+					</div>
+					<!-- <div class="payment-card">
+						<fieldset class="payment-card-info">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" class="form input" required />
+							<label for="number">Card number</label>
+							<input type="text" name="name" id="name" class="form input" required />
+							<label for="name">Expiration date</label>
+							<input type="text" name="name" id="name" class="form input" required />
+							<label for="cvc">cvc</label>
+							<input type="text" name="cvc" id="cvc" class="form input" required />
+						</fieldset>
+						<div class="payment-info">
+							<h2>Total amount: 2 299kr</h2>
+							<a href="checkout.html" class="button pay-button">PAY NOW</a>
+						</div>
+					</div> -->
+					</fieldset>
+				</form>
 		</section>
 		<section>
 			<div class="review-homepage">
