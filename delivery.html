@@ -54,7 +54,9 @@
 	</header>
 	<main>
 		<section>
-			<section class="cart-container">
+			<form action="submit.php or formsuccess.php" method="POST">
+				<fieldset class="delivery-container">
+					<section class="cart-container">
 				<div>
 					<h1 class="shopping-bag-header">1. Shopping bag</h1>
 				</div>
@@ -64,7 +66,7 @@
 						<div>
 							<p>Rainy Days "Everest"</p>
 							<p>Size M</p>
-							<p>Price: 2 299kr</p>
+							<p>Price: </p>
 							<p>Total items:</p>
 						</div>
 						<div>
@@ -83,11 +85,9 @@
 				</div>
 			<section> -->
 			</section>
-			<form action="submit.php or formsuccess.php" method="POST">
-				<fieldset class="delivery-container">
 					<div class="delivery-container-1">
 						<div>
-							<h2>1. Delivery information</h2>
+							<h2 class="delivery-all-headers">2. Delivery information</h2>
 						</div>
 						<div class="information-form">
 							<div>
@@ -122,7 +122,7 @@
 					</div>
 					<div class="shipping-container">
 						<div>
-							<h2>2. Shipping</h2>
+							<h2 class="delivery-all-headers">3. Shipping</h2>
 						</div>
 						<div class="radiobutton">
 							<input type="radio" id="pickup" name="shipping" value="pickup">
@@ -136,7 +136,7 @@
 						</div>
 					</div>
 					<div class="payment-alternatives">
-						<h2 class="payment-header">3. Payment</h2>
+						<h2 class="delivery-all-headers">4. Payment</h2>
 						<div class="payment">
 							<input type="radio" id="invoice" name="payment method" value="invoice" />
 							<label for="invoice">Invoice</label>
@@ -152,32 +152,17 @@
 							<i class="fa-brands fa-cc-paypal"></i>
 						</div>
 						<div class="payment">
-							<input type="radio" id="credit-/debit card" name="payment method"
-								value="credit-/debitcard" />
-							<label for="credit-/debit carn">Credit-/debit card</label>
+							<input type="radio" id="credit-debit-card" name="payment method"
+								value="credit-debitcard" />
+							<label for="credit-debit card">Credit-/debit card</label>
 							<i class="fa-brands fa-cc-visa"></i>
 							<i class="fa-brands fa-cc-mastercard"></i>
 						</div>
 					</div>
+					<div id="payment-card-fieldset"></div>
 					<div>
 						<a href="checkout.html" class="pay-button">Order and pay</a>
 					</div>
-					<!-- <div class="payment-card">
-						<fieldset class="payment-card-info">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" class="form input" required />
-							<label for="number">Card number</label>
-							<input type="text" name="name" id="name" class="form input" required />
-							<label for="name">Expiration date</label>
-							<input type="text" name="name" id="name" class="form input" required />
-							<label for="cvc">cvc</label>
-							<input type="text" name="cvc" id="cvc" class="form input" required />
-						</fieldset>
-						<div class="payment-info">
-							<h2>Total amount: 2 299kr</h2>
-							<a href="checkout.html" class="button pay-button">PAY NOW</a>
-						</div>
-					</div> -->
 				</fieldset>
 			</form>
 		</section>

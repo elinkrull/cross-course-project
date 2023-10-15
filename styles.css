@@ -79,6 +79,7 @@ nav a {
     text-align: center;
     padding: 30px;
     border-top: 2px solid rgba(0, 0, 0, 0.34);
+	margin-top: 30px;
 }
 
 .review-button {
@@ -321,10 +322,10 @@ a {
 	background-color: darkgrey;
   }
 
-/* delivery page */
+/* delivery.html page */
 
 
-.shopping-bag-header {
+.delivery-all-headers {
     font-size: 20px;
 }
 
@@ -362,22 +363,22 @@ a {
     border: none;
 }
 
-.cart-pay-button {
-    padding: 8px 160px;
-}
-
 .everest-shopping-bag {
     max-width: 300px;
 	margin: 20px;
 }
 
-.cart-container, .shipping-container, .payment-alternatives, .delivery-container-1 {
+.cart-container, .shipping-container, .payment-alternatives, .delivery-container-1, .payment-card-container {
 	background-color: rgba(245, 245, 245, 1);
 	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-left: 30px;
 	max-width: 800px;
 	padding: 20px;
+}
+
+.payment-card-container {
+	max-width: 500px;
 }
 
 .delivery-container {
@@ -413,13 +414,6 @@ a {
     border: none;
 }
 
-.payment-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .payment {
     margin: 10px 0px;
 }
@@ -443,10 +437,13 @@ a {
 }
 
 .pay-button {
+	justify-content: center;
+	display: flex;
+	max-width: 250px;
 	font-size: 18px;
-    padding: 10px 80px;
+    padding: 10px 150px;
 	background-color: rgba(48, 169, 60, 1);
-	margin-left: 50px;
+	margin-left: 30px;
 }
 
 /* checkout page*/
@@ -619,7 +616,7 @@ a {
         max-width: 100%;
     }
 
-    .button, .pay-button, .cart-pay-button, .continue-shopping-button {
+    .button, .continue-shopping-button {
         padding: 6px 40px;
     }
 
