@@ -78,8 +78,8 @@ function showError(message) {
 		  <div id="customAlertBox" class="hidden">
 			<p>New item added to cart</p>
 		  </div>
-		  <button id="button-count" class="add-to-cart-button" type="button"> ADD TO CART</button>
-		</div>
+			<button id="button-count" class="add-to-cart-button" type="button"> ADD TO CART</button>
+		  </div>
 		</div> 
 		`;
   
