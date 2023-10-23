@@ -9,7 +9,7 @@ function showError(message) {
 
 function showLoadingIndicator() {
   const loadingIndicator = document.getElementById("best-sellers-jackets");
-  loadingIndicator.innerHTML = "<li>Loading...</li>"
+  loadingIndicator.innerHTML = "<li>Loading...</li>";
 }
 
 //  API call
@@ -22,8 +22,9 @@ async function getJackets() {
     const response = await fetch(urlRainyDays);
     const result = await response.json();
     return result;
+
   } catch (error) {
-    throw new Error("Sorry, we could not fetch the jackets");
+    throw new Error("Sorry, something went wrong.");
   }
 }
 
@@ -31,23 +32,23 @@ async function getJackets() {
 
 async function displayJackets() {
   try {
-  const jackets = await getJackets();
-  const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
-  jacketsFrontPageContainer.innerHTML = "";
+    const jackets = await getJackets();
 
-  for (let i = 0; i < 4; i++) {
-    const jacket = jackets[i];
+    const jacketsFrontPageContainer = document.getElementById("best-sellers-jackets");
+    jacketsFrontPageContainer.innerHTML = "";
 
-    jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
+    for (let i = 0; i < 4; i++) {
+      const jacket = jackets[i];
+
+      jacketsFrontPageContainer.innerHTML += `<div class="best-sellers-jackets-container">
                                         <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description} "class="images-js"></a>
                                         <h2>${jacket.title}</h2>
                                         <p>USD ${jacket.price}</p>
                                         </div>`;
- }
-} catch (error) {
+    }
+  } catch (error) {
     showError(error.message);
   }
 }
-
 
 displayJackets();

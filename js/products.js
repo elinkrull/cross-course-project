@@ -9,7 +9,7 @@ function showError(message) {
 
 function showLoadingIndicator() {
   const loadingIndicator = document.getElementById("all-jackets");
-  loadingIndicator.innerHTML = "<li>Loading...</li>"
+  loadingIndicator.innerHTML = "<li>Loading...</li>";
 }
 
 //  API call
@@ -17,9 +17,9 @@ function showLoadingIndicator() {
 const urlRainyDays = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getJackets() {
-  try { 
-  showLoadingIndicator();
-  const response = await fetch(urlRainyDays);
+  try {
+    showLoadingIndicator();
+    const response = await fetch(urlRainyDays);
     const result = await response.json();
     return result;
   } catch (error) {
@@ -27,25 +27,23 @@ async function getJackets() {
   }
 }
 
-
 async function displayAllJackets() {
   try {
-  const productJackets = await getJackets();
-  const jacketsProductPageContainer = document.getElementById("all-jackets");
-  jacketsProductPageContainer.innerHTML = "";
+    const productJackets = await getJackets();
+    const jacketsProductPageContainer = document.getElementById("all-jackets");
+    jacketsProductPageContainer.innerHTML = "";
 
-for (let i = 0; i < productJackets.length; i++) {
-  const jacket = productJackets[i];
+    for (let i = 0; i < productJackets.length; i++) {
+      const jacket = productJackets[i];
 
-  jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
+      jacketsProductPageContainer.innerHTML += `<div class="all-jackets-container">
                                            <a href="specificproduct.html?id=${jacket.id}&title=${jacket.title}"><img src="${jacket.image}" alt="${jacket.description}" class="images-js"></a>
                                           <h2>${jacket.title}</h2>
                                           <p>USD ${jacket.price}</p>
                                           </div>`;
- } 
-
+    }
   } catch (error) {
-      showError(error.message);
+    showError(error.message);
   }
 }
 

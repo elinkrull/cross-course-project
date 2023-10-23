@@ -1,79 +1,108 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-        <title>About us</title>
-        <meta name="description" content="Here you can read more about who we are and information about the rain jackets that we are selling">
-        <script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <div class="member-info">
-                <p>FREE DELIVERY AND RETURN FOR MEMBERS</p>
-            </div>
-        <section class="header-content">
-            <figure>
-                <a href="index.html"><img src="img/RainyDays_Logo.png" alt="A Rainy Days Logo" class="logo"></a>
-            </figure>
-            <label for="hamburger-checkbox"><i class="fa-solid fa-bars"></i></label>
-            <input type="checkbox" id="hamburger-checkbox">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="onpage">About</a>
-                <a href="product.html">Shop</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="header-icons">
-                <label for="sitesearch" class="search-only">search</label>
-                <input type="text" name="search" id="sitesearch" class="search-field">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-regular fa-user"></i>
-            </div>  
-        </section>                                                      
-    </header>
-        <main> 
-           <section class="about-container">
-                <div class="about-text">
-                    <h1>About us</h1>
-                    <p>Rainy days focus is quality</p>
-                    <p>All our jackets are made of the highest performance fabrics and waterproofing techniques so that our jackets will last for many years and they are 100% waterproof.</p>
-                    <p>We will always try to keep out prices fair, but at the same time deliver the best quality jackets and the best service.</p> 
-                    <p>Rainy Days also offer repair service for a longer life of the jackets.</p>
-                </div>
-                <figure>
-                    <img src="img/hiker-stand-camping-front-orange-tent-backpack-mountains.jpg" alt="A hiker standing outside a tent looking at some mountains" class="about-image">
-                </figure>
-            </section>
-        </main>
-        <footer>
-            <div class="bottom-section">
-                <div class="bottom-section-1">
-                    <ul>
-                        <h2>Info</h2>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="index.html">Size Guide</a></li>
-                        <li><a href="index.html">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="bottom-section-2">
-                    <ul>
-                        <h2>Your benefits</h2>
-                        <li><a href="index.html">Free shipping</a></li>
-                        <li><a href="index.html">Free Return</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="social-media-icons">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div>
-            <div class="footer-bottom">
-                <p>Rainy Days &copy; All Rights Served</p>
-            </div>
-        </footer>
-    </body>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About us</title>
+	<meta name="description"
+		content="Here you can read more about who we are and information about the rain jackets that we are selling" />
+	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
+	<!-- Hotjar Tracking Code for Interaction Design CA final test -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 3695018, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="member-info">
+			<p>FREE DELIVERY AND RETURN FOR MEMBERS</p>
+		</div>
+		<section class="header-content">
+			<figure>
+				<a href="index.html"><img src="img/RainyDays_Logo.png" alt="A Rainy Days Logo" class="logo" /></a>
+			</figure>
+			<label for="hamburger-checkbox"><i class="fa-solid fa-bars"></i></label>
+			<input type="checkbox" id="hamburger-checkbox" />
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="about.html" class="onpage">About</a>
+				<a href="product.html">Shop</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+			<div class="header-icons">
+				<label for="sitesearch" class="search-only">search</label>
+				<input type="text" name="search" id="sitesearch" class="search-field" />
+				<div id="cart-count-box" class="hidden">
+					<p id="count"></p>
+				</div>
+				<i id="cart" class="fa-solid fa-cart-shopping"></i>
+				<i class="fa-regular fa-user"></i>
+			</div>
+		</section>
+	</header>
+	<main>
+		<section class="about-container">
+			<div class="about-text">
+				<h1>About us</h1>
+				<p>Rainy days focus is quality</p>
+				<p>
+					All our jackets are made of the highest performance fabrics and
+					waterproofing techniques so that our jackets will last for many
+					years and they are 100% waterproof.
+				</p>
+				<p>
+					We will always try to keep out prices fair, but at the same time
+					deliver the best quality jackets and the best service.
+				</p>
+				<p>
+					Rainy Days also offer repair service for a longer life of the
+					jackets.
+				</p>
+			</div>
+			<figure>
+				<img src="img/hiker-stand-camping-front-orange-tent-backpack-mountains.jpg"
+					alt="A hiker standing outside a tent looking at some mountains" class="about-image" />
+			</figure>
+		</section>
+	</main>
+	<footer>
+		<div class="bottom-section">
+			<div class="bottom-section-1">
+				<ul>
+					<h2>Info</h2>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="sizeguide.html">Size Guide</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+				</ul>
+			</div>
+			<div class="bottom-section-2">
+				<ul>
+					<h2>Your benefits</h2>
+					<li><a href="index.html">Free shipping</a></li>
+					<li><a href="index.html">Free Return</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="social-media-icons">
+			<i class="fa-brands fa-facebook"></i>
+			<i class="fa-brands fa-instagram"></i>
+		</div>
+		<div class="footer-bottom">
+			<p>Rainy Days &copy; All Rights Served</p>
+		</div>
+	</footer>
+</body>
+
 </html>
