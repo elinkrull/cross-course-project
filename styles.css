@@ -463,18 +463,15 @@ a {
 }
 
 .contact-content {
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
     margin: 40px auto;
 }
 
 .contact-form {
-    width: 400px;
+    max-width: 300px;
     height: 350px;
     background-color: rgba(245, 245, 245, 1);
     padding: 20px;
-    margin-right: 20px;
+    margin: 0px auto;
 }
 
 .contact-label {
@@ -495,9 +492,7 @@ a {
 }
 
 .woman-mountain {
-    max-width: 500px;
-    object-fit: cover;
-    object-position: 100% 40%;
+	display: none;
 }
 
 /* about page*/
@@ -570,6 +565,30 @@ a {
 }
 
 /*-------------------------- styles ------------------------- */
+
+
+@media(min-width:860px) {
+
+	.woman-mountain {
+		display: flex;
+		max-width: 500px;
+		object-fit: cover;
+		object-position: 100% 40%;
+	}
+
+	.contact-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+}
+
+
+
+
+
+
+
 
 
 @media(max-width:1216px) {
@@ -668,6 +687,11 @@ a {
     .payment-alternatives {
         margin: 30px 0px 30px 50px;
     }
+
+	.bootom-section {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
 }
 
