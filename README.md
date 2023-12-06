@@ -1,30 +1,67 @@
+# Your project title
 
-Brief - Interaction Design
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
-In this assignment you will work on your cross-course project (Rainy Days, Gamehub, SquareEyes) to:
+A simple overview of the use/purpose of the project.
 
-Test the usability of your website and see where you can improve the overall interaction.
+## Description
 
-Level 1 Process
-Consider conducting a usability test with the following methods:
+Add a more detailed description of what your project entails and set out to do.
 
-In-person
-Remote
-Guerilla
-In-person testing is more formal and empathetic so that you, as a moderator, acknowledge the user’s experience. Remote testing allows users to test the website from their own environment. Guerilla testing is less formal and can essentially be done anywhere with a small group of users for approximately 10 minutes. Whichever method you decide to use, set a goal and prepare your questions.
+You can add some bullet points if you'd like to:
 
-Plan which method is best for you and conduct your test. Observe the users and collect data. Once you’ve collected the data, decide what could be improved to enhance your website, and then go implement those changes using your skills in HTML, CSS and JavaScript.
+- List item 1
+- List item 2
+- List item 3
 
-Once you’ve added your changes, test the site with at least one more user (preferably 3-5). Gain feedback from the user and determine whether the changes you’ve made have improved the interaction on the website.
+## Built With
 
-Perform accessibility testing on your website to ensure it’s easy to use for users with accessibility issues.
+You can list a the tech stack that you've used over here
 
-Write a report detailing the usability test you conducted during this course, and include the changes you made to your website.
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
 
-Requirements
-Because your sites will all have slightly different designs, the areas that need improvement will be different. But by the end of the course assignment, you should have conducted a usability test and made improvements where needed. Recommended tools to use include WAVE and Hotjar.
+## Getting Started
 
-Submission
-Link to the updated website.
+### Installing
 
-A report covering the testing conducted and improvements made to the site. Please include any recorded sessions or data from Hotjar.
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/elinkrull/cross-course-project.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
