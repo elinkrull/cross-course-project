@@ -1,5 +1,7 @@
 # Your project title
 
+![image] ()
+
 ![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
 A simple overview of the use/purpose of the project.
@@ -16,10 +18,9 @@ You can add some bullet points if you'd like to:
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- HTML
+- CSS
+- JavaScript
 
 ## Getting Started
 
@@ -33,11 +34,6 @@ This is where you list how to get the project started. It typically just include
 git clone https://github.com/elinkrull/cross-course-project.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install
-```
 
 ### Running
 
@@ -55,13 +51,10 @@ Here you can detail any information you want to provide regarding contributing t
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
+[https://www.linkedin.com/in/elin-thoen-jakobsen-2224a2264/](www.linkedin.com)
 
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+Talitha
+Linked In learning guy
