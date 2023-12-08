@@ -1,6 +1,6 @@
 # Your project title
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://github.com/elinkrull/cross-course-project/assets/126721502/c7eef9a3-fda0-4be6-8b17-f14c69768281)
 
 A simple overview of the use/purpose of the project.
 
