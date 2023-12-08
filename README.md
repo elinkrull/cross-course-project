@@ -1,4 +1,4 @@
-# Your project title
+# Rainy Days
 
 ![image](https://github.com/elinkrull/cross-course-project/assets/126721502/c7eef9a3-fda0-4be6-8b17-f14c69768281)
 
