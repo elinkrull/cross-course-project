@@ -2,30 +2,39 @@
 
 ![image](https://github.com/elinkrull/cross-course-project/assets/126721502/c7eef9a3-fda0-4be6-8b17-f14c69768281)
 
-A simple overview of the use/purpose of the project.
+The purpose of this project was to design and develope an online shop selling men's and women’s rain jackets.
+The jackets ared designed for different outdoor activities, for men and women aged 30 to 50 years old.
+The website must contain: 
+- Home
+- List of Jackets
+- A jacket specific page showing the jacket (product details such as the description of the product, price and add to cart button)
+- A checkout page
+- A checkout success
+- About
+- Contact
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+The purpose of this project was to put into practice everything I have learned about design,HTML and CSS.
+First I had to create wireframes and build high-fidelity interactive prototypes in Figma.
+I had to make one prototype for mobile-view, and one for desktop.
+Then I had to make a properly functioning, responsive website.
 
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+- The HTML should be semantic and neat.
+- The CSS should follow the DRY principle and be easy to read.
+- The website should be responsive and with no horizontal scrollbars.
+- The site should be WCAG compliant, and accessibility should be taken into account.
+- Each page should have a unique <meta name="description">, <title>, and <h1>.
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- Figma
+- HTML
+- CSS
 
 ## Getting Started
 
 ### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 1. Clone the repo:
 
@@ -55,13 +64,12 @@ Here you can detail any information you want to provide regarding contributing t
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
+https://www.linkedin.com/in/elin-thoen-jakobsen-2224a2264/
 [My LinkedIn page](www.linkedin.com)
 
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+- Talitha Kruger for all the help when I was struggling with code, and for giving me motivation to work hard and not give up on this project.
+
+- Marte Bøe Olsen, Geir Sønnesyn, Weronika Martinsen, Bjørnar Jakobsen and Tor Hakon Bergseng for giving me feedback on my site during the developing proccess. 
