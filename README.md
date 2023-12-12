@@ -40,7 +40,7 @@ Then I had to make a properly functioning, responsive website.
 1. Clone the repo:
 
 ```bash
-git clone [Repo URL](https://github.com/elinkrull/cross-course-project.git)
+git clone https://github.com/elinkrull/cross-course-project.git
 ```
 
 ### Running
@@ -49,7 +49,7 @@ Use the live server to open the website in the browser by clicking "open in live
 
 ## Contributing
 
-Open a pull request so code can be reviewed.
+Open a pull request so that code can be reviewed.
 
 ## Contact
 
