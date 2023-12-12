@@ -24,7 +24,7 @@ Then I had to make a properly functioning, responsive website.
 - The CSS should follow the DRY principle and be easy to read.
 - The website should be responsive and with no horizontal scrollbars.
 - The site should be WCAG compliant, and accessibility should be taken into account.
-- Each page should have a unique <meta name="description">, <title>, and <h1>.
+- Each page should have a unique meta description, title and h1
 
 ## Built With
 
@@ -40,13 +40,12 @@ Then I had to make a properly functioning, responsive website.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/elinkrull/cross-course-project.git
+git clone [Repo URL](https://github.com/elinkrull/cross-course-project.git)
 ```
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
 
 ### Running
 
-Use the live server to open the website in the browser by clicking on "open in liveserver button" in VSC.
+Use the live server to open the website in the browser by clicking "open in liveserver button" in VSC.
 
 ## Contributing
 
